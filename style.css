@@ -1,0 +1,173 @@
+section
+{
+width:800px;
+color: black;
+font-family: arial, sans-serif;
+font-size: 14px;
+text-align: center;
+/* margin-left: 370px; */
+margin-left: auto;
+margin-right: auto;
+border: 1px solid black;  
+margin-top: 1em;
+background-color: white;
+}
+
+h1
+{
+/*	text-align: center;
+	color: black;
+	font-size: 16px;
+	font-weight: bord; 
+	font-family: arial, sans-serif;
+	text-align:  left;
+	margin-left: 180px; */ 
+	font-family: arial, sans-serif;
+	font-size: 1.5em;
+	color: #2a428a;
+	text-align: left;
+	margin-left: 1em;
+ }
+
+/*
+p.content
+{
+	line-height:200%;
+	text-align: left;
+	color: black;
+	font-size: 14px;
+	font-family: arial, sans-serif;
+	margin-left: 260px; 
+	margin-top: -20px;
+ }
+*/
+
+#table_corr
+ {
+border-collapse: collapse;
+position:absolute;
+/* left: 525px; */
+margin-left: 2em;
+}
+
+#table_res
+ {
+border-collapse: collapse;
+/*position:relative;
+left: 165px;
+top:10px;
+bottom: 50px; */
+margin-left: 2em;
+}
+
+td 
+{
+border: 1px solid black;
+text-align: left;
+}
+
+th
+{
+border: 1px solid black;
+/* text-align: center; */
+background-color: rgb(55,96,146);
+color: white;
+/* font-size: 16px; */
+font-family: arial, sans-serif;
+}
+
+#banner
+{
+width:800px;
+position:relative;
+left:-1px;
+bottom:10px;
+}
+#photo
+{
+width:500px;
+position:relative;
+top:-40px;
+left:35px;
+
+}
+#bouton1
+{
+background-color: rgb(55,96,146);
+color: white;
+font-family: arial, sans-serif;
+/* margin-left:325px;
+position: relative;
+top: -38px; */
+}
+#bouton2
+{
+background-color: rgb(55,96,146);
+color: white;
+font-family: arial, sans-serif;
+/*position: relative; 
+top:-14px;
+left: 20px; */
+}
+p.saisie
+{
+/* position:relative;
+left:11px;
+bottom:10px; */
+text-align: left;
+margin-left: 2em;
+}
+#bouton3
+{
+background-color: rgb(55,96,146);
+color: white;
+font-family: arial, sans-serif;
+/*position: relative; 
+top:-12px;
+left: +20px;
+float: left; 
+margin-left: 5em; */
+margin-top: -10px; 
+margin-left: auto; margin-right: auto;
+}
+
+/* JD add-ons */
+
+nav {
+	float: left;
+	width: 100%;
+	margin-bottom: 2em;
+}
+
+#modeles {
+	float: left;
+	width: 50%;
+}
+
+#questions {
+	float: right;
+	width: 50%;
+}
+
+.qlib {
+	color: red;
+}
+
+#requete {
+	font-family: courier;
+	font-size: 1.15em;
+	color: red;
+	text-align: left;
+	margin-left: 3em;
+}
+
+footer {
+	text-align: center;
+	font-family: arial, sans-serif;
+	font-size: 0.8em;
+	margin-top: 2px;
+}
+
+body {
+	background-color: #EDEDED;
+}	
