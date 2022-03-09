@@ -45,7 +45,7 @@ p.content
 #table_corr
  {
 border-collapse: collapse;
-position:absolute;
+/*position:absolute;*/
 /* left: 525px; */
 margin-left: 2em;
 }

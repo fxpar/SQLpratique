@@ -68,7 +68,12 @@ while($row = mysqli_fetch_array($result))
 }
 */
 $row = mysqli_fetch_array($result);
-echo $row[2];
+
+//echo $row[2];
+/* on envoie l'array de résultat
+ le js mettra la question et la correction à leurs places
+ */
+echo json_encode($row);
 
 
 mysqli_free_result($result);

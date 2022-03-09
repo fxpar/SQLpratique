@@ -100,7 +100,7 @@ mysqli_close($con);
 					var num = <?php echo $num ?>;		
 					getQuestion(ex, num);	
 					getCorrection(ex, num);
-					getRequete(ex, num);
+					//getRequete(ex, num);
 				</script>	
 				<input type="button" id = "bouton2" value="Question précédente" onclick="num=desincremente(num);getQuestion(ex,num);getCorrection(ex,num);getRequete(ex,num);reset();" />	
 				<input type="button" id = "bouton2" value="Question suivante" onclick="num=incremente(num);getQuestion(ex,num);getCorrection(ex,num);getRequete(ex,num);reset();" />	
