@@ -10,7 +10,7 @@ require_once('configUser.php');
 
 $ex = $_POST['ex']; 
 
-$dbnameUser = 'sqltraining_'.$ex;
+$dbnameUser = 'sqlpratique_'.$ex;
 
 //****************
 /*CONNECTION DB */

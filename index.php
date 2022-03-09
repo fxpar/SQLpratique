@@ -108,9 +108,9 @@ mysqli_close($con);
 		</nav>
 				
 		<!-- Enoncé question -->
-		<p class = "content"><h1>
+		<p class = "content"><h3>
 		<div id="question" class="qlib"></div>
-		</h1></p>		
+		</h3></p>		
 	
 		<!-- Résultat attendu -->
 		<p class = "content"><div id="corrTable"></div></p>				

@@ -11,7 +11,7 @@ require_once('configUser.php');
 $ex = $_GET['ex']; 
 $num = $_GET['num'];
 
-$dbnameUser = 'sqltraining_'.$ex;
+$dbnameUser = 'sqlpratique_'.$ex;
 
 //****************
 /*CONNECTION DB */
@@ -32,7 +32,7 @@ mysqli_set_charset( $con, 'utf8');
 //************** Récupérer la question
 
 	
-	//$query = 'SELECT * FROM questions WHERE db="sqltraining_'+$ex+'" AND numQuestion='+$num;
+	//$query = 'SELECT * FROM questions WHERE db="sqlpratique_'+$ex+'" AND numQuestion='+$num;
 	$query = 'SELECT * FROM questions';
 
 
