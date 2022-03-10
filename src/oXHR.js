@@ -27,7 +27,10 @@
 							var myArray = JSON.parse(xhr.responseText);
 							//console.log(myArray);
 						document.getElementById("question").innerHTML = myArray[2];												
-						document.getElementById("requete").innerHTML = myArray[3];												
+						document.getElementById("requete").innerHTML = myArray[3];	
+						if (myArray[4] !="") {
+						document.getElementById("commentaire").innerHTML = "<h3>Commentaires</h3>"+myArray[4];
+						}
 					}
 				}
 				xhr.open("GET","src/question.php?ex="+exercice+"&num="+number,true);
@@ -107,9 +110,11 @@
 			
 			// Fonction qui permet de vider tous les résultats
 			function reset(){
+				document.getElementById("question").innerHTML = "";
 				document.getElementById("requete").style.display = "none";
 				document.getElementById("query").value = "";
 				document.getElementById("resTable").innerHTML = "";
+				document.getElementById("commentaire").innerHTML = "";
 			}
 			
 			// Fonction qui ouvre la fenêtre pop-up

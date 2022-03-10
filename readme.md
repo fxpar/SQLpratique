@@ -28,8 +28,9 @@ Aucune note.
 # Auteur
 François Parlant
 
-#Licence
+# Licence
 cc-by-sa-4.0
+
 https://creativecommons.org/licenses/by-sa/4.0/deed.fr
 
 # Document original

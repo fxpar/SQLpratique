@@ -71,11 +71,13 @@ mysqli_close($con);
 	<meta charset="utf-8" />
 	<title>SQL Training</title>
    	<link rel="stylesheet" href="src/style.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<meta name="Author" content="François Parlant" />
 	<meta name="Keywords" content="Jérôme,Darmont,Enseignement,Informatique,SQL,MySQL,Tutoriel,Didacticiel" />
 	<meta name="Description" content="Entrainement au SQL (sur une idée originale de DARMONT Jérôme,HUYNH NGO Uyen Kim,ROJTHONGKUM Narumon)" />
-	<link href="./ext//bootstrap/css/bootstrap.min.css" rel="stylesheet" >
-<script src="./ext/bootstrap/js/bootstrap.bundle.min.js" ></script>
+	<!--<link href="./ext//bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+<script src="./ext/bootstrap/js/bootstrap.bundle.min.js" ></script>-->
 
 	<script type="text/JavaScript" src="src/oXHR.js"></script>
 	<script type="text/JavaScript">
@@ -113,7 +115,7 @@ mysqli_close($con);
 		</h3></p>		
 	
 		<!-- Résultat attendu -->
-		<p class = "content"><div id="corrTable"></div></p>				
+		<p class = "content"><div id="corrTable" ></div></p>				
 		
 		<!-- Correction -->
 		<p><input type="button" id = "bouton3" value="Correction" onclick="HideShow('requete')" /><br /></p>
@@ -132,16 +134,24 @@ mysqli_close($con);
 				</select> 
 			</div>		
 		<p class ="content"><h1>Saisir une requête SQL</h1></p>
-		<p class = "saisie">
-		<textarea name="query" id="query" rows="4" cols="60"></textarea></br>
+		<p class="saisie">
+		<textarea name="query" id="query" rows="4" ></textarea></br>
 		<p><input type="reset" id ="bouton3" value="Effacer" /><input type="submit" id = "bouton3" value="Exécuter" /><br />
 		</p></p>		
 		</form>		
 		
 		<p class = "content"><div id="resTable"></div></p>
+		
+		
+		<div id="commentaire"></div>
 	</section>
 	<footer>
-		Version "2.0" par Huynh Ngo Uyen Kim &amp; Narumon Rojthongkum - <a href="https://eric.univ-lyon2.fr/jdarmont/tutoriel-sql/">Retour</a> - <a href="#">Haut de page</a>
+		<p><a href="#">Haut de page</a></p>
+		<p>Version 3.0 par François Parlant - 
+
+<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">Licence cc-by-sa-4.0</a></p>
+		<p>Version "2.0" par Huynh Ngo Uyen Kim &amp; Narumon Rojthongkum - Sous la direction de Jérôme Darmont - Univ Lyon 2 <a href="https://eric.univ-lyon2.fr/jdarmont/tutoriel-sql/">Tutoriel SQL</a> </p>
+		<p>Version "1.0" par Jérôme DARMONT - Université Lyon 2 <a href="https://eric.univ-lyon2.fr/jdarmont/tutoriel-sql/">Tutoriel SQL</a></p>
 	</footer>
 </body>
 </html>
