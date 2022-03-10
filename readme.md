@@ -71,7 +71,8 @@ Les exercices ont été principalement crées pour les étudiants en DCG
 
 
 # Aperçu 
-Version 3.0
-![version 3.0](https://github.com/fxpar/SQLpratique/blob/main/res/screenshot-mobile.png)
+Version 3.0 mobile
+
+![version 3.0 mobile](https://github.com/fxpar/SQLpratique/blob/main/res/screenshot-mobile-01.png)
 
 

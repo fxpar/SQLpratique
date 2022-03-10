@@ -45,7 +45,7 @@ mysqli_set_charset( $con, 'utf8');
 		  echo "Failed to connect to MySQL: " . mysqli_connect_error();
 		  }
 
-echo $query;
+//echo $query;
 $result= mysqli_query($conUser,$query);
 $row = mysqli_fetch_array($result);
 
