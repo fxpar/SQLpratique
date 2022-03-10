@@ -25,7 +25,7 @@
 					// On ne fait quelque chose que si on a tout reçu et que le serveur est ok
 					if(xhr.readyState == 4 && xhr.status == 200){
 							var myArray = JSON.parse(xhr.responseText);
-							console.log(myArray);
+							//console.log(myArray);
 						document.getElementById("question").innerHTML = myArray[2];												
 						document.getElementById("requete").innerHTML = myArray[3];												
 					}

@@ -29,7 +29,8 @@ Aucune note.
 François Parlant
 
 #Licence
-MIT ou Creative Commons Attribution ?
+cc-by-sa-4.0
+https://creativecommons.org/licenses/by-sa/4.0/deed.fr
 
 # Document original
 Projet construit à partir du génial tutoriel de :
