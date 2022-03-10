@@ -40,10 +40,13 @@
 			// Fonction qui permet d'afficher la correction sous forme de table
 			function getCorrection(exercice, number){
 				var xhr = getXhr();
+				xhr.overrideMimeType('text/plain; charset=UTF-8');
 				// On défini ce qu'on va faire quand on aura la réponse
 				xhr.onreadystatechange = function(){
 					// On ne fait quelque chose que si on a tout reçu et que le serveur est ok
-					if(xhr.readyState == 4 && xhr.status == 200){						
+					if(xhr.readyState == 4 && xhr.status == 200){		
+					console.log("CORRECTION");
+						console.log(xhr.responseText);
 						document.getElementById("corrTable").innerHTML = xhr.responseText;												
 					}
 				}

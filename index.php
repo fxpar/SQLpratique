@@ -4,6 +4,7 @@
 error_reporting(E_ALL); 
 ini_set('display_errors', 1);
 
+header("Content-type:text/html charset=utf-8");
 
 
 // include config file with passwords
@@ -128,8 +129,8 @@ mysqli_close($con);
 
 				<select name="ex" id="ex">
 				  <option value="livres" selected="selected">Livres</option>
-				  <option value="saab">Pharma</option>
-				  <option value="mercedes">Chambres</option>
+				  <option value="saab">euro2021</option>
+				  <option value="mercedes">employee</option>
 				  <option value="audi">Sport</option>
 				</select> 
 			</div>		

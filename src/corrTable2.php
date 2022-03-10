@@ -9,8 +9,12 @@ require_once('../config/configUser.php');
 require_once('../config/configAdmin.php');
 
 
-$ex = $_GET['ex']; 
-$num = $_GET['num'];
+//$ex = $_GET['ex']; 
+//$num = $_GET['num'];
+
+$ex = "livres"; 
+$num = 1;
+
 
 $dbnameUser = 'sqlpratique_'.$ex;
 
@@ -38,16 +42,17 @@ $query = $row[3];
 //*****************
 // pour jouer la requête de la correction et obtenir le résultat attendu
 $conUser = mysqli_connect($dbhostUser,$dbuserUser,$dbpassUser,$dbnameUser);
-mysqli_set_charset( $conUser, 'utf8');
+mysqli_set_charset( $con, 'utf8');
 // Check connection
 		if (mysqli_connect_errno())
 		  {
 		  echo "Failed to connect to MySQL: " . mysqli_connect_error();
 		  }
 
-
+//echo $query;
 $result= mysqli_query($conUser,$query);
-
+//$row = mysqli_fetch_array($result);
+//$row = mysqli_fetch_all($result);
 
 
 function sql_to_html_table($sqlresult, $delim="\n") {
