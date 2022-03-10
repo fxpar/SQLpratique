@@ -70,6 +70,8 @@ Les exercices ont été principalement crées pour les étudiants en DCG
 * N'hésitez pas à proposer de nouveaux exercices en envoyant des "pull request" sur le dossier db/exercices/
 
 
-
+# Aperçu 
+Version 3.0
+![version 3.0](https://github.com/fxpar/SQLpratique/blob/main/res/screenshot-mobile.png)
 
 
