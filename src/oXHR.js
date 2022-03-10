@@ -30,7 +30,7 @@
 						document.getElementById("requete").innerHTML = myArray[3];												
 					}
 				}
-				xhr.open("GET","question.php?ex="+exercice+"&num="+number,true);
+				xhr.open("GET","src/question.php?ex="+exercice+"&num="+number,true);
 				xhr.send(null);
 			}
 			
@@ -44,7 +44,7 @@
 						document.getElementById("corrTable").innerHTML = xhr.responseText;												
 					}
 				}
-				xhr.open("GET","corrTable.php?ex="+exercice+"&num="+number,true);
+				xhr.open("GET","src/corrTable.php?ex="+exercice+"&num="+number,true);
 				xhr.send(null);
 			}
 			
@@ -58,7 +58,7 @@
 						document.getElementById("requete").innerHTML = xhr.responseText;												
 					}
 				}
-				xhr.open("GET","requete.php?ex="+exercice+"&num="+number,true);
+				xhr.open("GET","src/requete.php?ex="+exercice+"&num="+number,true);
 				xhr.send(null);
 			}
 			
@@ -72,7 +72,7 @@
 						document.getElementById("resTable").innerHTML = xhr.responseText;												
 					}
 				}
-				xhr.open("POST","resTable.php",true);				
+				xhr.open("POST","src/resTable.php",true);				
 				xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
 				xhr.send("query="+q);				
 				return false;

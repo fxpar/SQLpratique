@@ -5,7 +5,7 @@ header("Content-type:text/html");
 
 // include config file with passwords
 define('__ROOT__', dirname(dirname(__FILE__)));
-require_once('configAdmin.php');
+require_once('../config/configAdmin.php');
 
 
 $ex = $_GET['ex']; 

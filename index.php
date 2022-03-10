@@ -8,7 +8,7 @@ ini_set('display_errors', 1);
 
 // include config file with passwords
 define('__ROOT__', dirname(dirname(__FILE__)));
-require_once('configAdmin.php');
+require_once('config/configAdmin.php');
 
 
 //récupérer l'exercice en cours
@@ -70,14 +70,14 @@ mysqli_close($con);
 <head>
 	<meta charset="utf-8" />
 	<title>SQL Training</title>
-   	<link rel="stylesheet" href="style.css" type="text/css" />
+   	<link rel="stylesheet" href="src/style.css" type="text/css" />
 	<meta name="Author" content="François Parlant" />
 	<meta name="Keywords" content="Jérôme,Darmont,Enseignement,Informatique,SQL,MySQL,Tutoriel,Didacticiel" />
 	<meta name="Description" content="Entrainement au SQL (sur une idée originale de DARMONT Jérôme,HUYNH NGO Uyen Kim,ROJTHONGKUM Narumon)" />
-	<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" >
-<script src="./bootstrap/js/bootstrap.bundle.min.js" ></script>
+	<link href="./ext//bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+<script src="./ext/bootstrap/js/bootstrap.bundle.min.js" ></script>
 
-	<script type="text/JavaScript" src="oXHR.js"></script>
+	<script type="text/JavaScript" src="src/oXHR.js"></script>
 	<script type="text/JavaScript">
 		var Popup1 = null;
 		var Popup2 = null;
