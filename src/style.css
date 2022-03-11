@@ -105,7 +105,9 @@ margin-right:auto;
 {
 margin-right:5px;
 }
-
+th,td{
+	padding:5px;
+}
 
 
 
