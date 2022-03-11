@@ -32,7 +32,6 @@ border: 1px solid black;
 text-align: center;
 background-color: rgb(55,96,146);
 color: white;
-/* font-size: 16px; */
 font-family: arial, sans-serif;
 }
 
@@ -61,7 +60,7 @@ footer {
 	
 	text-align: center;
 	font-family: arial, sans-serif;
-	font-size: 0.8em;
+	font-size: x-small;
 	padding-top: 1em;
 	padding-bottom: 1em;
 	background:lightgrey;
@@ -91,11 +90,21 @@ left: 20px; */
 }
 
 
+.subbutton {
+	display:flex;
+	justify-content: space-between;
+}
 
 
+#bouton3
+{
+margin-right:auto;
+}
 
-
-
+#bouton4
+{
+margin-right:5px;
+}
 
 
 

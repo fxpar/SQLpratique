@@ -45,8 +45,8 @@
 				xhr.onreadystatechange = function(){
 					// On ne fait quelque chose que si on a tout reçu et que le serveur est ok
 					if(xhr.readyState == 4 && xhr.status == 200){		
-					console.log("CORRECTION");
-						console.log(xhr.responseText);
+					//console.log("CORRECTION");
+						//console.log(xhr.responseText);
 						document.getElementById("corrTable").innerHTML = xhr.responseText;												
 					}
 				}
@@ -78,9 +78,10 @@
 						document.getElementById("resTable").innerHTML = xhr.responseText;												
 					}
 				}
+				var params = "ex="+ex+"&num="+num+"&query="+q;
 				xhr.open("POST","src/resTable.php",true);				
 				xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-				xhr.send("query="+q);				
+				xhr.send(params);				
 				return false;
 			}
 			
@@ -113,6 +114,7 @@
 			
 			// Fonction qui permet de vider tous les résultats
 			function reset(){
+				console.log("RESET");
 				document.getElementById("question").innerHTML = "";
 				document.getElementById("requete").style.display = "none";
 				document.getElementById("query").value = "";

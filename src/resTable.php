@@ -1,42 +1,22 @@
 <?php 
 
-header("Content-type:text/html charset=utf-8");
+header("Content-type:text/html");
 
 
 // include config file with passwords
 define('__ROOT__', dirname(dirname(__FILE__)));
 require_once('../config/configUser.php');
-require_once('../config/configAdmin.php');
 
 
-$ex = $_GET['ex']; 
-$num = $_GET['num'];
+$ex = $_POST['ex']; 
+$num = $_POST['num'];
+$query = $_POST['query'];
 
 $dbnameUser = 'sqlpratique_'.$ex;
-
-
-//****************
-/*CONNECTION DB Admin */
-//*****************
-// pour obtenir la requête de correction
-$con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
-mysqli_set_charset( $con, 'utf8');
-// Check connection
-		if (mysqli_connect_errno())
-		  {
-		  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-		  }
-
-$query = 'SELECT * FROM questions WHERE db="sqlpratique_'.$ex.'" AND numQuestion='.$num;
-$result= mysqli_query($con,$query);
-$row = mysqli_fetch_array($result);
-$query = $row[3];
-
 
 //****************
 /*CONNECTION DB */
 //*****************
-// pour jouer la requête de la correction et obtenir le résultat attendu
 $conUser = mysqli_connect($dbhostUser,$dbuserUser,$dbpassUser,$dbnameUser);
 mysqli_set_charset( $conUser, 'utf8');
 // Check connection
@@ -46,6 +26,33 @@ mysqli_set_charset( $conUser, 'utf8');
 		  }
 
 
+
+
+
+
+//************** Récupérer la question
+
+	
+	//$query = 'SELECT * FROM questions WHERE db="sqlpratique_'+$ex+'" AND numQuestion='+$num;
+	//$query = 'SELECT * FROM questions';
+
+
+/*
+if (mysqli_query($con, $query)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $query . "<br>" . mysqli_error($con);
+}
+*/
+
+//**** version avec champs: utile pour champs cachés
+  /*     
+	foreach($_POST as $key => $value) {
+	  $action .= "POST parameter '$key' has '$value'\n";
+	}
+  */
+  
+  
 $result= mysqli_query($conUser,$query);
 
 
@@ -79,10 +86,7 @@ function sql_to_html_table($sqlresult, $delim="\n") {
 }
 
 echo sql_to_html_table( $result, $delim="\n" ) ; 
-//echo json_encode($row);
-
 
 mysqli_free_result($result);
-mysqli_close($con);
 mysqli_close($conUser);
 ?>

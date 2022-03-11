@@ -124,7 +124,7 @@ mysqli_close($con);
 		
 		<!-- Formulaire requête -->
 		<form method="post" onsubmit="return getResult(this.query.value);" action="">	
-			<div id="exSelect">
+			<span id="exSelect">
 				<label for="ex">Exercice:</label>
 
 				<select name="ex" id="ex">
@@ -133,11 +133,15 @@ mysqli_close($con);
 				  <option value="mercedes">employee</option>
 				  <option value="audi">Sport</option>
 				</select> 
-			</div>		
-		<p class ="content"><h1>Saisir une requête SQL</h1></p>
+			</span>		
+			<span>
+				<label for="num">Question n°:</label>
+				<input type="text" name="num" id="num" size="2" value="<?php echo $num ?>"/>
+			</span>
+		<p class ="content"><h3>Saisissez votre requête SQL</h3></p>
 		<p class="saisie">
 		<textarea name="query" id="query" rows="4" ></textarea></br>
-		<p><input type="reset" id ="bouton3" value="Effacer" /><input type="submit" id = "bouton3" value="Exécuter" /><br />
+		<p class="subbutton"><input type="reset" id ="bouton3" value="Effacer" /><input type="submit" id = "bouton4" value="Exécuter" /><br />
 		</p></p>		
 		</form>		
 		
