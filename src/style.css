@@ -1,5 +1,49 @@
-body, nav, section {
+body,   {
 	margin:5px;
+}
+
+nav {
+	display:flex;
+	justify-content: space-between;
+	background:#22ABCF;
+	
+	
+}
+
+nav .sep:before {
+	/*content: " | "; */
+}
+
+.bouton {
+	padding:5px;
+	border-left:1px solid white;
+	color: white;
+	font-family: arial, sans-serif;
+	margin-right:auto;
+	text-align:center;
+}
+.nav {
+	
+}
+
+#schemaRel .tname {
+	font-weight:bold;
+}
+
+#schemaRel .cp {
+	text-decoration:underline;
+}
+#schemaRel .cp:before {
+	font-size:smaller;
+	content: "🔑";
+}
+
+#schemaRel .ce {
+	font-style:italic;
+}
+#schemaRel .ce:before {
+	
+	content: "#";
 }
 
 #table_corr
@@ -38,10 +82,14 @@ font-family: arial, sans-serif;
 .qlib {
 	color: black;
 	background: #F9F9FA;
+	box-sizing: border-box;
 	border-radius:5px;
 	box-shadow: 3px 3px 3px lightgrey;
 	padding:5px;
 	border-top:5px solid #1EACFE;
+	font-size: larger;
+	font-family: arial, sans-serif;
+	text-align:center;
 }
 
 #requete {
@@ -75,9 +123,7 @@ footer {
 
 #bouton1
 {
-background-color: rgb(55,96,146);
-color: white;
-font-family: arial, sans-serif;
+
 /* margin-left:325px;
 position: relative;
 top: -38px; */
@@ -86,9 +132,7 @@ top: -38px; */
 
 #bouton2
 {
-background-color: rgb(55,96,146);
-color: white;
-font-family: arial, sans-serif;
+
 /*position: relative; 
 top:-14px;
 left: 20px; */
