@@ -81,6 +81,7 @@ mysqli_close($con);
 <script src="./ext/bootstrap/js/bootstrap.bundle.min.js" ></script>-->
 
 	<script type="text/JavaScript" src="src/oXHR.js"></script>
+	
 	<script type="text/JavaScript">
 		var Popup1 = null;
 		var Popup2 = null;
@@ -88,16 +89,11 @@ mysqli_close($con);
 </head>
 <body>		
 	<section>
-		<!--<img id = "banner" src="Image/BannerSQL.jpg"  alt="Bannière J. Darmont - Tutoriel SQL" border="1" />-->
-
-		<!-- Menu (JD) -->
+		
 		<nav>
-			<div id="modeles">
-				<input type="submit" id="bouton1" name="submit" value="Modèle conceptuel UML" onclick="if (!Popup1 || !Popup1.open || Popup1.closed) Popup1 = ouvrePopup('schemaUML.php', 500, 650); else Popup1.focus();" />
-				<input type="submit" id="bouton1" name="submit" value="Modèle logique relationnel" onclick="if (!Popup2 || !Popup2.open || Popup2.closed) Popup2 = ouvrePopup('schemaRelationnel.php', 150, 400); else Popup2.focus();" /> 
-			</div>
-
-			<div id="questions">
+			
+				
+			
 				<script type="text/JavaScript">
 					var ex = '<?php echo $ex ?>';
 					var num = <?php echo $num ?>;		
@@ -105,23 +101,32 @@ mysqli_close($con);
 					getCorrection(ex, num);
 					//getRequete(ex, num);
 				</script>	
-				<input type="button" id = "bouton2" value="Question précédente" onclick="num=desincremente(num);getQuestion(ex,num);getCorrection(ex,num);getRequete(ex,num);reset();" />	
-				<input type="button" id = "bouton2" value="Question suivante" onclick="num=incremente(num);getQuestion(ex,num);getCorrection(ex,num);getRequete(ex,num);reset();" />	
-			</div>
-		</nav>
 				
+				<span type="button" class="bouton nav " id = "bouton2" value="Question précédente" onclick="num=desincremente(num);getQuestion(ex,num);getCorrection(ex,num);getRequete(ex,num);reset();" >préc</span>	
+				
+				<span type="submit" class="bouton schema sep" id="bouton1" name="submit" value="Modèle conceptuel UML" onclick="if (!Popup1 || !Popup1.open || Popup1.closed) Popup1 = ouvrePopup('schemaUML.php', 500, 650); else Popup1.focus();" >Schéma UML</span>
+				
+				<span type="submit" class="bouton schema sep" id="bouton1" name="submit" value="Modèle logique relationnel" onclick="if (!Popup2 || !Popup2.open || Popup2.closed) Popup2 = ouvrePopup('schemaRelationnel.php', 150, 400); else Popup2.focus();" >liste table</span> 
+				
+				<span type="button" class="bouton nav sep" id = "bouton2" value="Question suivante" onclick="num=incremente(num);getQuestion(ex,num);getCorrection(ex,num);getRequete(ex,num);reset();" >suiv</span>	
+			
+		</nav>
 		<!-- Enoncé question -->
-		<p class = "content"><h3>
+		<div id="schemaRel" class=""><?php echo file_get_contents('db/exercices/'.$ex.'/schemaRel.txt') ?></div>
+		
+		<!-- Enoncé question -->
+		<p class = "content">
 		<div id="question" class="qlib"></div>
-		</h3></p>		
+		</p>		
 	
 		<!-- Résultat attendu -->
 		<p class = "content"><div id="corrTable" ></div></p>				
 		
 		<!-- Correction -->
-		<p><input type="button" id = "bouton3" value="Correction" onclick="HideShow('requete')" /><br /></p>
+		<p type="button" id = "boutonCorr" value="Correction" onclick="HideShow('requete');this.innerHTML='Masquer la correction';" /> Voir la correction<p>
 		<p id="requete"><br /></p>
-		
+		<hr class="separation"/>
+		<br/>
 		<!-- Formulaire requête -->
 		<form method="post" onsubmit="return getResult(this.query.value);" action="">	
 			<span id="exSelect">
@@ -141,7 +146,7 @@ mysqli_close($con);
 		<p class ="content"><h3>Saisissez votre requête SQL</h3></p>
 		<p class="saisie">
 		<textarea name="query" id="query" rows="4" ></textarea></br>
-		<p class="subbutton"><input type="reset" id ="bouton3" value="Effacer" /><input type="submit" id = "bouton4" value="Exécuter" /><br />
+		<p class="subbutton"><input type="reset" id ="boutonEffacer" value="Effacer" /><input type="submit" id = "boutonExecuter" value="Exécuter" /><br />
 		</p></p>		
 		</form>		
 		

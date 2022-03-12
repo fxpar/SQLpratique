@@ -1,0 +1,15 @@
+<ul>
+		<li>
+			<span class="tname">livre</span> (
+			<span class="cp">id</span>,
+			<span class="at">titre</span>,
+			<span class="at">isbn</span>,
+			<span class="ce">auteur</span>)
+		</li>
+		<li>
+			<span class="tname">auteur</span> (
+			<span class="cp">id</span>,
+			<span class="at">nom</span>,
+			<span class="at">prenom</span>)
+		</li>
+</ul>
