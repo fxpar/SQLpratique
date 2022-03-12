@@ -14,9 +14,9 @@ require_once('config/configAdmin.php');
 
 //récupérer l'exercice en cours
 //$ex = $_POST['ex']; 
- if(isset($_POST['ex'])) { $ex = $_POST['ex'];} else {$ex = 'livres'; };
- if(isset($_POST['num'])) { $num = $_POST['num'];} else {$num = 1; };
-
+ if(isset($_GET['ex'])) { $ex = $_GET['ex'];} else {$ex = 'livres'; };
+ if(isset($_GET['num'])) { $num = $_GET['num'];} else {$num = 1; };
+ if(isset($_GET['i'])) { $i = $_GET['i'];} else {$i = 1; };
 // prends le nom de l'exercice
 
 
@@ -96,9 +96,12 @@ mysqli_close($con);
 			
 				<script type="text/JavaScript">
 					var ex = '<?php echo $ex ?>';
-					var num = <?php echo $num ?>;		
+					var num = <?php echo $num ?>;
+					var i = <?php echo $i ?>;
+					var currenLocation = window.location.origin+window.location.pathname;
 					getQuestion(ex, num);	
 					getCorrection(ex, num);
+					
 					//getRequete(ex, num);
 				</script>	
 				
@@ -111,31 +114,19 @@ mysqli_close($con);
 				<span type="button" class="bouton nav sep" id = "bouton2" value="Question suivante" onclick="num=incremente(num);getQuestion(ex,num);getCorrection(ex,num);getRequete(ex,num);reset();" >suiv &gt;</span>	
 			
 		</nav>
-		<!-- Enoncé question -->
+		
+		<!-- Schéma Relatinnel -->
 		<div id="schemaRel" class="" style="display:none"><?php echo file_get_contents('db/exercices/'.$ex.'/schemaRel.txt') ?></div>
 		
-		<!-- Enoncé question -->
-		<p class = "content">
-		<div id="question" class="qlib"></div>
-		</p>		
-	
-		<!-- Résultat attendu -->
-		<p class = "content"><div id="corrTable" ></div></p>				
-		
-		<!-- Correction -->
-		<p type="button" id="boutonCorr" value="Correction" onclick="HideShow('requete','boutonCorr','Masquer la correction', 'Voir la correction');" /> Voir la correction<p>
-		<p id="requete" style="display:none" ><br /></p>
-		<hr class="separation"/>
-		<br/>
 		<!-- Formulaire requête -->
 		<form method="post" onsubmit="return getResult(this.query.value);" action="" id="form1">	
-			<span id="exSelect">
-				<label for="ex">Exercice:</label>
+		<span id="exSelect">
+				<label for="exList">Exercice:</label>
 
-				<select name="ex" id="ex">
+				<select name="ex" id="exList" onchange="window.location.href = currenLocation+'?ex='+this.options[this.selectedIndex].value+'&i='+this.options[this.selectedIndex].index;">
 				  <option value="livres" selected="selected">Livres</option>
-				  <option value="saab">euro2021</option>
-				  <option value="mercedes">employee</option>
+				  <option value="euro2021">euro2021</option>
+				  <option value="employee">employee</option>
 				  <option value="audi">Sport</option>
 				</select> 
 			</span>		
@@ -143,25 +134,50 @@ mysqli_close($con);
 				<label for="num">Question n°:</label>
 				<input type="text" name="num" id="num" size="2" value="<?php echo $num ?>"/>
 			</span>
-		<p class ="content"><h3>Saisissez votre requête SQL</h3></p>
+		
+		
+		
+		<!-- Enoncé question -->
+		<p class = "content">
+		<div id="question" class="qlib"></div>
+		</p>		
+	
+		<!-- Résultat attendu -->
+		<div id="corrTable" ></div>			
+		
+		<!-- Correction -->
+		<p type="button" id="boutonCorr" value="Correction" onclick="HideShow('requete','boutonCorr','Masquer la correction', 'Voir la correction');" /> Voir la correction<p>
+		<p id="requete" style="display:none" ><br /></p>
+		<hr class="separation"/>
+		
+		
+			
+		
 		<p class="saisie">
+		<h3>Saisissez votre requête SQL</h3>
 		<textarea name="query" id="query" rows="4" ></textarea></br>
-		<p class="subbutton"><input type="reset" id ="boutonEffacer" value="Effacer" /><input type="submit" id = "boutonExecuter" value="Exécuter" /><br />
+		<p class="subbutton"><input type="reset" id ="boutonEffacer" value="Effacer" /><input type="submit" id="boutonExecuter" value="Exécuter" /><br />
 		</p></p>		
 		</form>		
 		
-		<p class = "content"><div id="resTable"></div></p>
+		<p class="content"><div id="resTable"></div></p>
 		
 		
 		<div id="commentaire"></div>
 	</section>
 	<footer>
-		<p><a href="#">Haut de page</a></p>
-		<p>Version 3.0 par François Parlant - 
+		<p><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr"><img src="res/by-sa.svg" alt="licence creative commons by sa 4.0"/></a><br/><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">Licence cc-by-sa-4.0</a></p>
+		
 
-<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">Licence cc-by-sa-4.0</a></p>
-		<p>Version "2.0" par Huynh Ngo Uyen Kim &amp; Narumon Rojthongkum - Sous la direction de Jérôme Darmont - Univ Lyon 2 <a href="https://eric.univ-lyon2.fr/jdarmont/tutoriel-sql/">Tutoriel SQL</a> </p>
-		<p>Version "1.0" par Jérôme DARMONT - Université Lyon 2 <a href="https://eric.univ-lyon2.fr/jdarmont/tutoriel-sql/">Tutoriel SQL</a></p>
+		
+		<div id="attribution">
+		<p>v3.0 François Parlant</p>
+		<p>v2.0 Huynh Ngo Uyen Kim - Narumon Rojthongkum - Univ Lyon 2 <a href="https://eric.univ-lyon2.fr/jdarmont/tutoriel-sql/">Tutoriel SQL</a> </p>
+		<p>v1.0 Jérôme DARMONT - Univ Lyon 2 <a href="https://eric.univ-lyon2.fr/jdarmont/tutoriel-sql/">Tutoriel SQL</a></p>
+		
+		
+		
+		</div>
 	</footer>
 </body>
 </html>

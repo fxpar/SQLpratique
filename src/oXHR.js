@@ -31,6 +31,7 @@
 						if (myArray[4] !="") {
 						document.getElementById("commentaire").innerHTML = "<h3>Commentaires</h3>"+myArray[4];
 						}
+						setEx(i);
 					}
 				}
 				xhr.open("GET","src/question.php?ex="+exercice+"&num="+number,true);
@@ -139,3 +140,20 @@
 					if (typeof msgid!== 'undefined') document.getElementById(msgid).innerHTML = onmsg;
 				}
 			} 
+			
+			// Fonction pour obtenir le numéro de l'exercice dans la liste en fonction du nom
+			function indexMatchingText(ele, text) {
+    for (var i=0; i<ele.length;i++) {
+        if (ele[i].childNodes[0].nodeValue === text){
+            return i;
+        }
+    }
+    return undefined;
+}
+
+			// fonction pour mettre sélectionner l'exercice en cours
+			
+			function setEx(i){
+				
+				document.getElementById('exList').getElementsByTagName('option')[i].selected = 'selected'
+			}

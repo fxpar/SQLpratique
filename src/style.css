@@ -6,11 +6,11 @@ nav {
 	display:flex;
 	justify-content: space-between;
 	background:#22ABCF;
-	
+	margin-bottom:10px;
 	
 }
 
-nav .sep:before {
+nav .sep:before, #attribution span {
 	/*content: " | "; */
 }
 
@@ -75,7 +75,7 @@ th
 border: 1px solid lightgrey;
 text-align: center;
 background-color: white;
-color: grey;
+color: #22ABCF;
 font-family: arial, sans-serif;
 }
 
@@ -86,10 +86,15 @@ font-family: arial, sans-serif;
 	border-radius:5px;
 	box-shadow: 3px 3px 3px lightgrey;
 	padding:5px;
-	border-top:5px solid #1EACFE;
+	border-top:5px solid #22ABCF;
 	font-size: larger;
 	font-family: arial, sans-serif;
 	text-align:center;
+}
+
+h3{
+	margin-top:0px;
+	margin-bottom:0px;
 }
 
 #form1 {
@@ -108,22 +113,15 @@ font-family: arial, sans-serif;
 	text-align:center;
 	margin-left:auto;
 	margin-right:auto;
+	maring-top:0px;
 }
 #query {
 	text-align:left;
-	width:100%;
+	width:98%;
 	max-width:400px;
-}
-footer {
-	
-	text-align: center;
-	font-family: arial, sans-serif;
-	font-size: x-small;
-	padding-top: 1em;
-	padding-bottom: 1em;
-	background:lightgrey;
 	
 }
+
 
 
 #bouton1
@@ -183,6 +181,9 @@ th,td{
 	padding:5px;
 }
 
+#commentaire{
+	text-align:center;
+}
 
 #commentaire h3 {
 	margin-left:auto;
@@ -190,14 +191,32 @@ th,td{
 	text-align:center;
 	background:lightgrey;
 	color:white;
-	padding 5px;
+	padding: 5px;
 	width:80%;
 	max-width:400px;
 	
 }
 
+footer {
+	
+	text-align: center;
+	font-family: arial, sans-serif;
+	font-size: small;
+	padding-top: 10px;
+	padding-bottom: 1em;
+	background:#22ABCF;
+	width:100%;
+	
+}
+#attribution{
+	
+	color:white;
+}
 
-
+#attribution p {
+	/*margin-top:1px;
+	margin-bottom:1px;*/
+}
 
 
 
