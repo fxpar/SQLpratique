@@ -17,26 +17,31 @@ border-collapse: collapse;
 margin-left:auto;
 margin-right: auto;
 text-align:center;
-
+overflow:visible;
 }
 
 td 
 {
-border: 1px solid black;
+border: 1px solid lightgrey;
 text-align: left;
 }
 
 th
 {
-border: 1px solid black;
+border: 1px solid lightgrey;
 text-align: center;
-background-color: rgb(55,96,146);
-color: white;
+background-color: white;
+color: grey;
 font-family: arial, sans-serif;
 }
 
 .qlib {
-	color: red;
+	color: black;
+	background: #F9F9FA;
+	border-radius:5px;
+	box-shadow: 3px 3px 3px lightgrey;
+	padding:5px;
+	border-top:5px solid #1EACFE;
 }
 
 #requete {
@@ -89,21 +94,41 @@ top:-14px;
 left: 20px; */
 }
 
+#boutonCorr {
+	width:80%;
+	max-width:400px;
+	background:grey;
+	color:white;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	padding:10px;
+}
 
+.separation {
+	width:95%;
+	border: 1px solid lightgrey;
+	
+}
 .subbutton {
 	display:flex;
 	justify-content: space-between;
 }
 
 
-#bouton3
+#boutonEffacer
 {
 margin-right:auto;
 }
 
-#bouton4
+#boutonExecuter
 {
+	background:#8FC32A;
+	color:white;
+	border:0px;
+	padding:5px;
 margin-right:5px;
+box-shadow: 3px 3px 3px lightgrey;
 }
 th,td{
 	padding:5px;
