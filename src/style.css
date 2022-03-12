@@ -92,6 +92,11 @@ font-family: arial, sans-serif;
 	text-align:center;
 }
 
+#form1 {
+	text-align:center;
+	
+}
+
 #requete {
 	font-family: courier;
 	font-size: 1.15em;
@@ -179,7 +184,17 @@ th,td{
 }
 
 
-
+#commentaire h3 {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	background:lightgrey;
+	color:white;
+	padding 5px;
+	width:80%;
+	max-width:400px;
+	
+}
 
 
 

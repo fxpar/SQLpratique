@@ -102,17 +102,17 @@ mysqli_close($con);
 					//getRequete(ex, num);
 				</script>	
 				
-				<span type="button" class="bouton nav " id = "bouton2" value="Question précédente" onclick="num=desincremente(num);getQuestion(ex,num);getCorrection(ex,num);getRequete(ex,num);reset();" >préc</span>	
+				<span type="button" class="bouton nav " id = "bouton2" value="Question précédente" onclick="num=desincremente(num);getQuestion(ex,num);getCorrection(ex,num);getRequete(ex,num);reset();" >&lt; préc</span>	
 				
-				<span type="submit" class="bouton schema sep" id="bouton1" name="submit" value="Modèle conceptuel UML" onclick="if (!Popup1 || !Popup1.open || Popup1.closed) Popup1 = ouvrePopup('schemaUML.php', 500, 650); else Popup1.focus();" >Schéma UML</span>
+				<span type="submit" class="bouton schema sep" id="btSchemaUml" name="submit" value="Modèle conceptuel UML" onclick="if (!Popup1 || !Popup1.open || Popup1.closed) Popup1 = ouvrePopup('schemaUML.php', 500, 650); else Popup1.focus();" >▶UML</span>
 				
-				<span type="submit" class="bouton schema sep" id="bouton1" name="submit" value="Modèle logique relationnel" onclick="if (!Popup2 || !Popup2.open || Popup2.closed) Popup2 = ouvrePopup('schemaRelationnel.php', 150, 400); else Popup2.focus();" >liste table</span> 
+				<span type="submit" class="bouton schema sep" id="btSchemaRel"  onclick="HideShow('schemaRel','btSchemaRel','▼ Tables', '▶ Tables');" >▶ Tables</span> 
 				
-				<span type="button" class="bouton nav sep" id = "bouton2" value="Question suivante" onclick="num=incremente(num);getQuestion(ex,num);getCorrection(ex,num);getRequete(ex,num);reset();" >suiv</span>	
+				<span type="button" class="bouton nav sep" id = "bouton2" value="Question suivante" onclick="num=incremente(num);getQuestion(ex,num);getCorrection(ex,num);getRequete(ex,num);reset();" >suiv &gt;</span>	
 			
 		</nav>
 		<!-- Enoncé question -->
-		<div id="schemaRel" class=""><?php echo file_get_contents('db/exercices/'.$ex.'/schemaRel.txt') ?></div>
+		<div id="schemaRel" class="" style="display:none"><?php echo file_get_contents('db/exercices/'.$ex.'/schemaRel.txt') ?></div>
 		
 		<!-- Enoncé question -->
 		<p class = "content">
@@ -123,12 +123,12 @@ mysqli_close($con);
 		<p class = "content"><div id="corrTable" ></div></p>				
 		
 		<!-- Correction -->
-		<p type="button" id = "boutonCorr" value="Correction" onclick="HideShow('requete');this.innerHTML='Masquer la correction';" /> Voir la correction<p>
-		<p id="requete"><br /></p>
+		<p type="button" id="boutonCorr" value="Correction" onclick="HideShow('requete','boutonCorr','Masquer la correction', 'Voir la correction');" /> Voir la correction<p>
+		<p id="requete" style="display:none" ><br /></p>
 		<hr class="separation"/>
 		<br/>
 		<!-- Formulaire requête -->
-		<form method="post" onsubmit="return getResult(this.query.value);" action="">	
+		<form method="post" onsubmit="return getResult(this.query.value);" action="" id="form1">	
 			<span id="exSelect">
 				<label for="ex">Exercice:</label>
 

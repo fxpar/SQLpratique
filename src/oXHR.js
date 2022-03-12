@@ -128,8 +128,14 @@
 			}
 			
 			// Fonction pour afficher/masquer un élément
-			function HideShow(id){ 
+			function HideShow(id, msgid, onmsg, offmsg){ 
+				
 				var o = document.getElementById(id); 
-				if(o.style.display == '' || o.style.display == 'block') o.style.display = 'none'; 
-				else o.style.display = 'block'; 
+				if(o.style.display == '' || o.style.display == 'block') {
+					o.style.display = 'none'; 
+					if (typeof msgid!== 'undefined') document.getElementById(msgid).innerHTML = offmsg;
+				}else{
+					o.style.display = 'block'; 
+					if (typeof msgid!== 'undefined') document.getElementById(msgid).innerHTML = onmsg;
+				}
 			} 
