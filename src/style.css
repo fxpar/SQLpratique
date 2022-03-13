@@ -1,3 +1,9 @@
+:root{
+  --primary: #22ABCF;
+  --maxwidth: 400px;
+}
+
+
 body   {
 	margin:5px;
 }
@@ -5,7 +11,7 @@ body   {
 nav {
 	display:flex;
 	justify-content: space-between;
-	background:#22ABCF;
+	background:var(--primary);
 	margin-bottom:10px;
 	
 }
@@ -84,7 +90,7 @@ th
 border: 1px solid lightgrey;
 text-align: center;
 background-color: white;
-color: #22ABCF;
+color: var(--primary);
 font-family: arial, sans-serif;
 }
 
@@ -95,7 +101,7 @@ font-family: arial, sans-serif;
 	border-radius:5px;
 	box-shadow: 3px 3px 3px lightgrey;
 	padding:5px;
-	border-top:5px solid #22ABCF;
+	border-top:5px solid var(--primary);
 	font-size: larger;
 	font-family: arial, sans-serif;
 	text-align:center;
@@ -116,7 +122,9 @@ h3{
 	font-size: 1.15em;
 	color: red;
 	text-align: left;
-	margin-left: 3em;
+	margin-left: auto;
+	margin-right: auto;
+	max-width:var(--maxwidth);
 }
 .saisie {
 	text-align:center;
@@ -127,7 +135,7 @@ h3{
 #query {
 	text-align:left;
 	width:98%;
-	max-width:400px;
+	max-width:var(--maxwidth);
 	
 }
 
@@ -152,7 +160,7 @@ left: 20px; */
 
 #boutonCorr {
 	width:80%;
-	max-width:400px;
+	max-width:var(--maxwidth);
 	background:grey;
 	color:white;
 	margin-left:auto;
@@ -168,6 +176,10 @@ left: 20px; */
 }
 .subbutton {
 	display:flex;
+	text-align:center;
+	max-width:var(--maxwidth);
+	margin-left:auto;
+	margin-right:auto;
 	justify-content: space-between;
 }
 
@@ -202,7 +214,7 @@ th,td{
 	color:white;
 	padding: 5px;
 	width:80%;
-	max-width:400px;
+	max-width:var(--maxwidth);
 	
 }
 
@@ -213,7 +225,7 @@ footer {
 	font-size: small;
 	padding-top: 10px;
 	padding-bottom: 1em;
-	background:#22ABCF;
+	background:var(--primary);
 	width:100%;
 	
 }

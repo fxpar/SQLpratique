@@ -28,8 +28,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `livre` (
-  `idLivre` int(11) NOT NULL,
-  `titreLivreFR` text NOT NULL,
+  `id` int(11) NOT NULL,
+  `titre` text NOT NULL,
   `isbn` tinytext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -37,7 +37,7 @@ CREATE TABLE `livre` (
 -- Déchargement des données de la table `livre`
 --
 
-INSERT INTO `livre` (`idLivre`, `titreLivreFR`, `isbn`) VALUES
+INSERT INTO `livre` (`id`, `titre`, `isbn`) VALUES
 (1, 'Astérix le gaulois', '27465465'),
 (2, 'Cyrano de Bergerac', '2789456321');
 
@@ -49,7 +49,7 @@ INSERT INTO `livre` (`idLivre`, `titreLivreFR`, `isbn`) VALUES
 -- Index pour la table `livre`
 --
 ALTER TABLE `livre`
-  ADD PRIMARY KEY (`idLivre`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
@@ -59,7 +59,7 @@ ALTER TABLE `livre`
 -- AUTO_INCREMENT pour la table `livre`
 --
 ALTER TABLE `livre`
-  MODIFY `idLivre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
