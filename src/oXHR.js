@@ -19,7 +19,7 @@
 			
 			
 						// Fonction qui permet d'afficher les questions
-			function getQuestion2(exercice, number){
+			function getQuestion(exercice, number){
 				var xhr = getXhr();
 				// On défini ce qu'on va faire quand on aura la réponse
 				xhr.onreadystatechange = function(){
@@ -37,7 +37,7 @@
 						setEx(i, num);
 					}
 				}
-				xhr.open("GET","src/question2.php?ex="+exercice+"&num="+number,true);
+				xhr.open("GET","src/question.php?ex="+exercice+"&num="+number,true);
 				xhr.send(null);
 			}
 			
