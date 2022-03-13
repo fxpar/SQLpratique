@@ -46,12 +46,39 @@
 			}
 			
 			
+			
+			// Fonction qui permet d'afficher le résultat de la requête saisie sous forme de table ou de XML
+			function getResult(q){					
+				var xhr = getXhr();
+				// On défini ce qu'on va faire quand on aura la réponse
+				xhr.onreadystatechange = function(){
+					// On ne fait quelque chose que si on a tout reçu et que le serveur est ok
+					if(xhr.readyState == 4 && xhr.status == 200){	
+							console.log(xhr.responseText);
+							var response = JSON.parse(xhr.responseText);
+							console.log(response);
+						var r = document.getElementById("resTable");
+							r.innerHTML ="";
+						if (typeof response['res'] !=="undefined") r.innerHTML = response['res'];					
+						if (typeof response['rbBefore'] !=="undefined") r.innerHTML = '<div>AVANT</br>'+response['rbBefore']+'</div><div>&nbsp;</div>';						
+						if (typeof response['rbAfter'] !=="undefined") r.innerHTML = r.innerHTML+'<div>APRES</br>'+response['rbAfter']+'</div>';
+
+					
+						//document.getElementById("resTable").innerHTML = xhr.responseText;												
+					}
+				}
+				var params = "ex="+ex+"&num="+num+"&query="+q;
+				xhr.open("POST","src/resTable.php",true);				
+				xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+				xhr.send(params);				
+				return false;
+			}
 
 			
 
 			
 			// Fonction qui permet d'afficher le résultat de la requête saisie sous forme de table ou de XML
-			function getResult(q){					
+			function getResult0(q){					
 				var xhr = getXhr();
 				// On défini ce qu'on va faire quand on aura la réponse
 				xhr.onreadystatechange = function(){

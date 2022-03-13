@@ -57,7 +57,7 @@ nav .sep:before, #attribution span {
 	font-size:smaller;
 	content: "️#️⃣";
 }
-#corrTable {
+#corrTable, #resTable {
 	display:flex;
 	justify-content: center;
 }

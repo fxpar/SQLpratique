@@ -2,22 +2,38 @@
 
 header("Content-type:text/html charset=utf-8");
 
+/*********************************
+* Recupère la requête de l'étudiant POST
+* Récupère le nom de l'ex et le numéro de la question POST
+* Va chercher les infos concernant la question
+* @TODO nettoyer la requête étudiant pour éviter les TRANSACS
+* @TODO nettoyer la requête étudiant pour éviter les UPDATE, INSERT, DELETE ,si pas de rollback
+* Effectuer la requête de rollback AVANT si nécessaire
+* Effectuer la requête étudiant
+* Afficher la requête de rollback APRÈS si nécessaire
+* Renvoyer un array encodé en json
+**********************************/
 
+
+// récupérer les identifiants et mots de passe des bases de données
 // include config file with passwords
 define('__ROOT__', dirname(dirname(__FILE__)));
 require_once('../config/configUser.php');
 require_once('../config/configAdmin.php');
 
-
+// Récupérer le nom de l'exercice et le numéro de la question
 $ex = $_GET['ex']; 
 $num = $_GET['num'];
 
+// Construire le nom de la base de données à partir du nom de l'exercice
 $dbnameUser = 'sqlpratique_'.$ex;
 
 
 //****************
 /*CONNECTION DB Admin */
 //*****************
+// pour obtenir la requête de correction
+// @TODO: mettre les questions dans une base propre à chaque exercice
 // pour obtenir la requête de correction
 $con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 mysqli_set_charset( $con, 'utf8');
