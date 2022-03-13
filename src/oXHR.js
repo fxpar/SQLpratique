@@ -17,6 +17,33 @@
                 return xhr;
 			}
 			
+			
+						// Fonction qui permet d'afficher les questions
+			function getQuestion2(exercice, number){
+				var xhr = getXhr();
+				// On défini ce qu'on va faire quand on aura la réponse
+				xhr.onreadystatechange = function(){
+					// On ne fait quelque chose que si on a tout reçu et que le serveur est ok
+					if(xhr.readyState == 4 && xhr.status == 200){
+							console.log(xhr.responseText);
+							var response = JSON.parse(xhr.responseText);
+							console.log(response);
+						document.getElementById("question").innerHTML = response[0][2];
+						document.getElementById("requete").innerHTML = response[0][3];
+						document.getElementById("corrTable").innerHTML = response[1]+response[2]+response[3];						
+						if (response[0][4] !="") {
+						document.getElementById("commentaire").innerHTML = "<h3>Commentaires</h3>"+response[0][4];
+						}
+						setEx(i, num);
+					}
+				}
+				xhr.open("GET","src/question2.php?ex="+exercice+"&num="+number,true);
+				xhr.send(null);
+			}
+			
+			
+			
+			
 			// Fonction qui permet d'afficher les questions
 			function getQuestion(exercice, number){
 				var xhr = getXhr();
@@ -39,6 +66,7 @@
 			}
 			
 			// Fonction qui permet d'afficher la correction sous forme de table
+			// pourrait parfaitement remplacer la partie "Question" en obtenant le tableau
 			function getCorrection(exercice, number){
 				var xhr = getXhr();
 				xhr.overrideMimeType('text/plain; charset=UTF-8');
@@ -153,7 +181,8 @@
 
 			// fonction pour mettre sélectionner l'exercice en cours
 			
-			function setEx(i){
+			function setEx(i, n){
 				
-				document.getElementById('exList').getElementsByTagName('option')[i].selected = 'selected'
+				document.getElementById('exList').getElementsByTagName('option')[i].selected = 'selected';
+				document.getElementById('num').value = n;
 			}

@@ -99,19 +99,20 @@ mysqli_close($con);
 					var num = <?php echo $num ?>;
 					var i = <?php echo $i ?>;
 					var currenLocation = window.location.origin+window.location.pathname;
-					getQuestion(ex, num);	
-					getCorrection(ex, num);
+					getQuestion2(ex, num);	
+					//getQuestion(ex, num);	
+					//getCorrection(ex, num);
 					
 					//getRequete(ex, num);
 				</script>	
 				
-				<span type="button" class="bouton nav " id = "bouton2" value="Question précédente" onclick="num=desincremente(num);getQuestion(ex,num);getCorrection(ex,num);getRequete(ex,num);reset();" >&lt; préc</span>	
+				<span type="button" class="bouton nav " id = "bouton2" value="Question précédente" onclick="num=desincremente(num);getQuestion2(ex,num);reset();" >&lt; préc</span>	
 				
 				<span type="submit" class="bouton schema sep" id="btSchemaUml" name="submit" value="Modèle conceptuel UML" onclick="if (!Popup1 || !Popup1.open || Popup1.closed) Popup1 = ouvrePopup('schemaUML.php', 500, 650); else Popup1.focus();" >▶UML</span>
 				
 				<span type="submit" class="bouton schema sep" id="btSchemaRel"  onclick="HideShow('schemaRel','btSchemaRel','▼ Tables', '▶ Tables');" >▶ Tables</span> 
 				
-				<span type="button" class="bouton nav sep" id = "bouton2" value="Question suivante" onclick="num=incremente(num);getQuestion(ex,num);getCorrection(ex,num);getRequete(ex,num);reset();" >suiv &gt;</span>	
+				<span type="button" class="bouton nav sep" id = "bouton2" value="Question suivante" onclick="num=incremente(num);getQuestion2(ex,num);reset();" >suiv &gt;</span>	
 			
 		</nav>
 		
