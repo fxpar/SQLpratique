@@ -26,6 +26,11 @@ nav .sep:before, #attribution span {
 	
 }
 
+#schemaRel {
+	border-bottom: 1px solid lightgrey;
+	margin-bottom: 10px;
+}
+
 #schemaRel .tname {
 	font-weight:bold;
 }
@@ -42,8 +47,9 @@ nav .sep:before, #attribution span {
 	font-style:italic;
 }
 #schemaRel .ce:before {
-	
-	content: "#";
+	font-style:normal;
+	font-size:smaller;
+	content: "️#️⃣";
 }
 #corrTable {
 	display:flex;

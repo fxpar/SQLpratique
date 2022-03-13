@@ -70,6 +70,10 @@ Les exercices ont été principalement crées pour les étudiants en DCG
 * hébergement github
 * [ ]insert / update / delete encadrés par des TRANSAC (Begin... Rollback)
 
+## Exemple Rollback
+La table des questions contient une colonne "ROLLBACK" avec une requête à effectuer AVANT et APRÈS:
+
+![Rollback](https://github.com/fxpar/SQLpratique/blob/main/res/screenshot-mobile-02.png)
 
 
 # Collaboration
