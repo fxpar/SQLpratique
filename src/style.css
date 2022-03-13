@@ -45,7 +45,10 @@ nav .sep:before, #attribution span {
 	
 	content: "#";
 }
-
+#corrTable {
+	display:flex;
+	justify-content: center;
+}
 #table_corr
  {
 border-collapse: collapse;

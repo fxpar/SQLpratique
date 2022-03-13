@@ -59,16 +59,16 @@ $query = $row[3];
 // Sinon on ajoute le begin transac et on exécute le rollback avant et après.
 if ($row[6]=="") {
 	$result= mysqli_query($conUser,$query);
-	$response[] = sql_to_html_table( $result, $delim="\n" ) ; 
+	$response['corr'] = sql_to_html_table( $result, $delim="\n" ) ; 
 	mysqli_free_result($result);
 }else{
 	$beginTransac = mysqli_begin_transaction($conUser);
 	$rbBefore = mysqli_query($conUser,$row[6]);
 	$result= mysqli_query($conUser,$query);
-	//$response[] = sql_to_html_table( $result, $delim="\n" ) ; 
-	$response[] = sql_to_html_table( $rbBefore, $delim="\n" ) ; 
+	//$response['corr'] ;
+	$response['rbBefore'] = sql_to_html_table( $rbBefore, $delim="\n" ) ; 
 	$rbAfter = mysqli_query($conUser,$row[6]);
-	$response[] = sql_to_html_table( $rbAfter, $delim="\n" ) ; 
+	$response['rbAfter'] = sql_to_html_table( $rbAfter, $delim="\n" ) ; 
 	$rb = mysqli_rollback($conUser);
 	//mysqli_free_result($result);
 	mysqli_free_result($rbBefore);

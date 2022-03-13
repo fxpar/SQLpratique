@@ -30,7 +30,11 @@
 							console.log(response);
 						document.getElementById("question").innerHTML = response[0][2];
 						document.getElementById("requete").innerHTML = response[0][3];
-						document.getElementById("corrTable").innerHTML = response[1]+response[2]+response[3];						
+						var c = document.getElementById("corrTable");
+							c.innerHTML ="";
+						if (typeof response['corr'] !=="undefined") c.innerHTML = response['corr'];					
+						if (typeof response['rbBefore'] !=="undefined") c.innerHTML = '<div>AVANT</br>'+response['rbBefore']+'</div><div>&nbsp;</div>';						
+						if (typeof response['rbAfter'] !=="undefined") c.innerHTML = c.innerHTML+'<div>APRES</br>'+response['rbAfter']+'</div>';						
 						if (response[0][4] !="") {
 						document.getElementById("commentaire").innerHTML = "<h3>Commentaires</h3>"+response[0][4];
 						}
@@ -42,60 +46,9 @@
 			}
 			
 			
+
 			
-			
-			// Fonction qui permet d'afficher les questions
-			function getQuestion(exercice, number){
-				var xhr = getXhr();
-				// On défini ce qu'on va faire quand on aura la réponse
-				xhr.onreadystatechange = function(){
-					// On ne fait quelque chose que si on a tout reçu et que le serveur est ok
-					if(xhr.readyState == 4 && xhr.status == 200){
-							var myArray = JSON.parse(xhr.responseText);
-							//console.log(myArray);
-						document.getElementById("question").innerHTML = myArray[2];												
-						document.getElementById("requete").innerHTML = myArray[3];	
-						if (myArray[4] !="") {
-						document.getElementById("commentaire").innerHTML = "<h3>Commentaires</h3>"+myArray[4];
-						}
-						setEx(i);
-					}
-				}
-				xhr.open("GET","src/question.php?ex="+exercice+"&num="+number,true);
-				xhr.send(null);
-			}
-			
-			// Fonction qui permet d'afficher la correction sous forme de table
-			// pourrait parfaitement remplacer la partie "Question" en obtenant le tableau
-			function getCorrection(exercice, number){
-				var xhr = getXhr();
-				xhr.overrideMimeType('text/plain; charset=UTF-8');
-				// On défini ce qu'on va faire quand on aura la réponse
-				xhr.onreadystatechange = function(){
-					// On ne fait quelque chose que si on a tout reçu et que le serveur est ok
-					if(xhr.readyState == 4 && xhr.status == 200){		
-					//console.log("CORRECTION");
-						//console.log(xhr.responseText);
-						document.getElementById("corrTable").innerHTML = xhr.responseText;												
-					}
-				}
-				xhr.open("GET","src/corrTable.php?ex="+exercice+"&num="+number,true);
-				xhr.send(null);
-			}
-			
-			// Fonction qui permet d'afficher la correction sous forme de requête
-			function getRequete(exercice, number){
-				var xhr = getXhr();
-				// On défini ce qu'on va faire quand on aura la réponse
-				xhr.onreadystatechange = function(){
-					// On ne fait quelque chose que si on a tout reçu et que le serveur est ok
-					if(xhr.readyState == 4 && xhr.status == 200){						
-						document.getElementById("requete").innerHTML = xhr.responseText;												
-					}
-				}
-				xhr.open("GET","src/requete.php?ex="+exercice+"&num="+number,true);
-				xhr.send(null);
-			}
+
 			
 			// Fonction qui permet d'afficher le résultat de la requête saisie sous forme de table ou de XML
 			function getResult(q){					
