@@ -1,3 +1,6 @@
+
+![version beta](https://img.shields.io/badge/version-beta-red)
+
 # Aperçu 
 Version 3.0 mobile
 
@@ -29,6 +32,22 @@ Aucune note.
 
 # Installation
 À installer sur un serveur php et mysql
+
+# Nouvelles fonctionalités
+* plusieurs exercices
+* variantes de correction proposées en commentaires
+* hébergement github
+* insert / update / delete encadrés par des TRANSAC (Begin... Rollback)
+
+## Exemple Rollback
+La table des questions contient une colonne "ROLLBACK" avec une requête à effectuer AVANT et APRÈS:
+
+![Rollback](https://github.com/fxpar/SQLpratique/blob/main/res/screenshot-mobile-02.png)
+
+
+# Collaboration
+* N'hésitez pas à proposer de nouveaux exercices en envoyant des "pull request" sur le dossier db/exercices/
+
 
 
 # Auteur
@@ -63,21 +82,6 @@ Les exercices ont été principalement crées pour les étudiants en DCG
   * https://en.wikibooks.org/wiki/SQL_Exercises/The_computer_store
 
 
-
-# Nouvelles fonctionalités
-* plusieurs exercices
-* variantes de correction proposées en commentaires
-* hébergement github
-* [ ]insert / update / delete encadrés par des TRANSAC (Begin... Rollback)
-
-## Exemple Rollback
-La table des questions contient une colonne "ROLLBACK" avec une requête à effectuer AVANT et APRÈS:
-
-![Rollback](https://github.com/fxpar/SQLpratique/blob/main/res/screenshot-mobile-02.png)
-
-
-# Collaboration
-* N'hésitez pas à proposer de nouveaux exercices en envoyant des "pull request" sur le dossier db/exercices/
 
 
 
