@@ -10,7 +10,8 @@ body   {
 
 nav {
 	display:flex;
-	justify-content: space-between;
+	 align-items:baseline;
+	justify-content: stretch;
 	background:var(--primary);
 	margin-bottom:10px;
 	
@@ -27,6 +28,7 @@ nav .sep:before, #attribution span {
 	font-family: arial, sans-serif;
 	margin-right:auto;
 	text-align:center;
+	width:100%;
 }
 .nav {
 	

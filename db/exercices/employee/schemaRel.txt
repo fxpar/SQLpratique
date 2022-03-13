@@ -1,0 +1,10 @@
+<ul>
+		<li>
+			<span class="tname">employee</span> (
+			<span class="cp">id</span>,
+			<span class="at">name</span>,
+			<span class="at">salary</span>,
+			<span class="at">managerId</span>)
+		</li>
+		
+</ul>
