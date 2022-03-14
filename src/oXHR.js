@@ -36,7 +36,7 @@
 						if (typeof response['rbBefore'] !=="undefined") c.innerHTML = '<div>AVANT</br>'+response['rbBefore']+'</div><div>&nbsp;</div>';						
 						if (typeof response['rbAfter'] !=="undefined") c.innerHTML = c.innerHTML+'<div>APRES</br>'+response['rbAfter']+'</div>';						
 						if (response[0][5] !="") {
-						document.getElementById("commentaire").innerHTML = "<h3>Commentaires</h3>"+response[0][5];
+						document.getElementById("commentaire").innerHTML = response[0][5];
 						}
 						setEx(i, num);
 					}

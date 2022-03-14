@@ -163,8 +163,9 @@ mysqli_close($con);
 		
 		<p class="content"><div id="resTable"></div></p>
 		
-		
-		<div id="commentaire"></div>
+		<!-- Commentaires -->
+		<p type="button" id="boutonCom" value="Commentaire" onclick="HideShow('commentaire','boutonCom','Masquer les commentaires', 'Voir les commentaires');" /> Voir les commentaires<p>
+		<div id="commentaire" style="display:none"></div>
 	</section>
 	<footer>
 		<p><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr"><img src="res/by-sa.svg" alt="licence creative commons by sa 4.0"/></a><br/><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">Licence cc-by-sa-4.0</a></p>
