@@ -48,6 +48,11 @@ La table des questions contient une colonne "ROLLBACK" avec une requête à effe
 # Collaboration
 * N'hésitez pas à proposer de nouveaux exercices en envoyant des "pull request" sur le dossier db/exercices/
 
+# À FAIRE
+- [x] Mettre les questions dans une table par exercice
+- [ ] Nettoyer les requêtes modifications s'il n'y a pas de rollback
+- [ ] Afficher les messages d'erreurs au lieu du résultat
+
 
 
 # Auteur
