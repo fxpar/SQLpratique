@@ -9,12 +9,12 @@ erDiagram
     }
     ORDER ||--|{ LINE-ITEM : contains
     ORDER {
-        int 🔑orderNumber
+        int orderNumber
         string deliveryAddress
-		string #️⃣ custNumber
+		string custNumber
     }
     LINE-ITEM {
-        string 🔑productCode
+        string productCode
         int quantity
         float pricePerUnit
     }
