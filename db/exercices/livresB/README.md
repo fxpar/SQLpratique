@@ -11,7 +11,7 @@ erDiagram
     ORDER {
         int orderNumber
         string deliveryAddress
-		string custNumber
+		string #custNumber
     }
     LINE-ITEM {
         string productCode
