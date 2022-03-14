@@ -41,7 +41,7 @@ mysqli_set_charset( $con, 'utf8');
 		  echo "Failed to connect to MySQL: " . mysqli_connect_error();
 		  }
 
-$query = 'SELECT * FROM questions WHERE db="sqlpratique_'.$ex.'" AND numQuestion='.$num;
+$query = 'SELECT * FROM '.$ex.' WHERE numQuestion='.$num;
 $result= mysqli_query($con,$query);
 $row = mysqli_fetch_array($result);
 
@@ -67,7 +67,7 @@ mysqli_set_charset( $conUser, 'utf8');
 		  }
 
 
-$query = $row[3];
+$query = $row[4];
 
 // S'il le rollback est vide, on execute la correction
 // Sinon on ajoute le begin transac et on exécute le rollback avant et après.

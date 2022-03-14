@@ -28,15 +28,15 @@
 							console.log(xhr.responseText);
 							var response = JSON.parse(xhr.responseText);
 							console.log(response);
-						document.getElementById("question").innerHTML = response[0][2];
-						document.getElementById("requete").innerHTML = response[0][3];
+						document.getElementById("question").innerHTML = response[0][3];
+						document.getElementById("requete").innerHTML = response[0][4];
 						var c = document.getElementById("corrTable");
 							c.innerHTML ="";
 						if (typeof response['corr'] !=="undefined") c.innerHTML = response['corr'];					
 						if (typeof response['rbBefore'] !=="undefined") c.innerHTML = '<div>AVANT</br>'+response['rbBefore']+'</div><div>&nbsp;</div>';						
 						if (typeof response['rbAfter'] !=="undefined") c.innerHTML = c.innerHTML+'<div>APRES</br>'+response['rbAfter']+'</div>';						
-						if (response[0][4] !="") {
-						document.getElementById("commentaire").innerHTML = "<h3>Commentaires</h3>"+response[0][4];
+						if (response[0][5] !="") {
+						document.getElementById("commentaire").innerHTML = "<h3>Commentaires</h3>"+response[0][5];
 						}
 						setEx(i, num);
 					}
@@ -59,6 +59,7 @@
 							console.log(response);
 						var r = document.getElementById("resTable");
 							r.innerHTML ="";
+						// s'il n'y a pas de rollback, on affiche le résultat, sinon on affiche le AVANT / APRES
 						if (typeof response['res'] !=="undefined") r.innerHTML = response['res'];					
 						if (typeof response['rbBefore'] !=="undefined") r.innerHTML = '<div>AVANT</br>'+response['rbBefore']+'</div><div>&nbsp;</div>';						
 						if (typeof response['rbAfter'] !=="undefined") r.innerHTML = r.innerHTML+'<div>APRES</br>'+response['rbAfter']+'</div>';
@@ -77,22 +78,7 @@
 			
 
 			
-			// Fonction qui permet d'afficher le résultat de la requête saisie sous forme de table ou de XML
-			function getResult0(q){					
-				var xhr = getXhr();
-				// On défini ce qu'on va faire quand on aura la réponse
-				xhr.onreadystatechange = function(){
-					// On ne fait quelque chose que si on a tout reçu et que le serveur est ok
-					if(xhr.readyState == 4 && xhr.status == 200){						
-						document.getElementById("resTable").innerHTML = xhr.responseText;												
-					}
-				}
-				var params = "ex="+ex+"&num="+num+"&query="+q;
-				xhr.open("POST","src/resTable.php",true);				
-				xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-				xhr.send(params);				
-				return false;
-			}
+
 			
 			// Fonction qui incrémente le numéro de question
 			function incremente(number){				
