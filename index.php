@@ -129,6 +129,7 @@ mysqli_close($con);
 				  <option value="euro2021">euro2021</option>
 				  <option value="employee">employee</option>
 				  <option value="audi">Sport</option>
+				  <option value="chalets">chalets</option>
 				</select> 
 			</span>		
 			<span>
