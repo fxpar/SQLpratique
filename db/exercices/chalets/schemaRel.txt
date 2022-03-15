@@ -1,0 +1,39 @@
+<ul>
+		<li>
+			<span class="tname">Chalet</span> (
+			<span class="cp">NumChalet</span>,
+			<span class="at">NomChalet</span>,
+			<span class="at">CapaciteAccueil</span>,
+			<span class="at">NbPieces</span>,
+			<span class="at">NbLitsSimples</span>,
+			<span class="at">NbLitsDoubles</span>,
+			<span class="ce">NumHotel</span>,
+			<span class="ce">CodeType</span>)
+		</li>
+		<li>
+			<span class="tname">Employe</span> (
+			<span class="cp">CodeEmp</span>,
+			<span class="at">NomEmp</span>,
+			<span class="at">PrenomEmp</span>,
+			<span class="at">RueEmp</span>,
+			<span class="at">VilleEmp</span>,
+			<span class="at">CPEmp</span>,
+			<span class="at">Salaire</span>,
+			<span class="ce">NumHotel</span>)
+		</li>
+		<li>
+			<span class="tname">Hotel</span> (
+			<span class="cp">NumHotel</span>,
+			<span class="at">NomHotel</span>,
+			<span class="at">NbEtoiles</span>,
+			<span class="at">CPEmp</span>,
+			<span class="at">VilleEmp</span>)
+		</li>
+		<li>
+			<span class="tname">Type</span> (
+			<span class="cp">CodeType</span>,
+			<span class="at">LibelleType</span>,
+			<span class="at">TarifSemaine</span>,
+			<span class="at">TarifNuitee</span>)
+		</li>
+</ul>
