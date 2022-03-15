@@ -10,8 +10,8 @@ erDiagram
 			int NbPieces
 			int NbLitsSimples
 			int NbLitsDoubles
-			int #NumHotel
-			int #CodeType
+			int NumHotel
+			int CodeType
     }
     Employe ||--|{ Hotel : travailler
     Employe {
