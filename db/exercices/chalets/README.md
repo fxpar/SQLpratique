@@ -3,7 +3,7 @@
 erDiagram
     Chalet ||--o{ Hotel : appartenir
 	Chalet ||--o{ Type : appartenir
-    chalet {
+    Chalet {
 			int NumChalet
 			text NomChalet
 			int CapaciteAccueil
