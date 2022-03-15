@@ -39,7 +39,7 @@ erDiagram
 			text VilleEmp
     }
 	Type {
-			int Type PK
+			int Type
 			int CodeType
 			text LibelleType
 			float TarifSemaine
