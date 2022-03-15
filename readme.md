@@ -48,8 +48,37 @@ La table des questions contient une colonne "ROLLBACK" avec une requête à effe
 # Collaboration
 * N'hésitez pas à proposer de nouveaux exercices en envoyant des "pull request" sur le dossier db/exercices/
 
+# Tutoriel vidéo interactif
+Apprenez les bases du sql avec une vidéo et un quiz intégré après chaque concept nouveau.
+
+Les tutos sont téléchargeables et installables sur n'importe quelle plateforme Moodle ou Wordpress (grâce au module H5P).
+
+## Tuto débutant: requêtes simples
+Découvrer comment interroger les bases de données et réaliser les modifications simples: ajout, modification, suppression.
+
+https://www.fxparlant.net/sql-decouverte/
+
+![Découverte SQL H5P](https://github.com/fxpar/SQLpratique/blob/main/res/H5p-1.png)
+
+![Découverte SQL H5P quiz](https://github.com/fxpar/SQLpratique/blob/main/res/H5p-1-quiz.png)
+
+## Tuto avancé : les jointures
+Apprenez à relier les différentes tables d'une bases de données pour obtenir des informations riches.
+
+https://www.fxparlant.net/sql-decouverte-2/
+
+![Découverte SQL H5P](https://github.com/fxpar/SQLpratique/blob/main/res/H5p-2.png)
+
+![Découverte SQL H5P quiz](https://github.com/fxpar/SQLpratique/blob/main/res/H5p-2-quiz.png)
+
+
+
+
+
 # À FAIRE
 - [x] Mettre les questions dans une table par exercice
+- [ ] Corriger la mise à jour de la liste déroulante des exercices
+- [ ] Remettre "voir la correction" à chaque changement de question
 - [ ] Nettoyer les requêtes modifications s'il n'y a pas de rollback
 - [ ] Afficher les messages d'erreurs au lieu du résultat
 

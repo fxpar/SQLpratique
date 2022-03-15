@@ -46,3 +46,6 @@ erDiagram
 			float TarifNuitee
     }
 ```
+
+# Activité
+Modifier le schéma pour permettre aux employés de travailler dans plusieurs hôtels
