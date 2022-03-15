@@ -11,28 +11,28 @@ erDiagram
     Chalet }o--|| Hotel : appartenir
 	Chalet }o--|| Type : appartenir
     Chalet {
-			int NumChalet PK
+			int NumChalet
 			text NomChalet
 			int CapaciteAccueil
 			int NbPieces
 			int NbLitsSimples
 			int NbLitsDoubles
-			int NumHotel FK
-			int CodeType FK
+			int NumHotel
+			int CodeType
     }
     Employe }o--|| Hotel : travailler
     Employe {
-			int CodeEmp PK
+			int CodeEmp
 			text NomEmp
 			text PrenomEmp
 			text RueEmp
 			text VilleEmp
 			int CPEmp
 			float Salaire
-			int NumHotel FK
+			int NumHotel
     }
     Hotel {
-			int NumHotel PK
+			int NumHotel
 			text NomHotel
 			int NbEtoiles
 			int CPEmp
