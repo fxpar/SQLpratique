@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : mer. 30 mars 2022 à 15:02
+-- Généré le : sam. 02 avr. 2022 à 19:56
 -- Version du serveur :  5.7.11
 -- Version de PHP : 7.4.6
 
@@ -43,16 +43,16 @@ CREATE TABLE `chalets` (
 --
 
 INSERT INTO `chalets` (`idQuestion`, `numQuestion`, `db`, `enonce`, `correction`, `commentaire`, `rollback`) VALUES
-(1, 1, '', 'Quels sont les hôtels (nom et ville de l’hôtel) qui ont plus de 3 étoiles ?', 'SELECT NomHotel, VilleHotel from Hotel WHERE NbEtoiles > 3', 'Simple requête avec where numérique', ''),
-(2, 2, '', 'Quel est le montant total des salaires (addition) par hôtel (numéro et nom d’hôtel) triés\r\npar ordre alphabétique des hôtels ?', 'select NomHotel, sum(Salaire) from Employe\r\nJOIN hotel on Hotel.NumHotel = Employe.NumHotel\r\nGroup by NomHotel \r\norder by NomHotel \r\n', 'Jointure et addition', ''),
-(3, 3, '', 'Quels sont les chalets (numéro et nom du chalet) qui ont 5 pièces, classés par hôtels (nom de l’hôtel) ?', 'SELECT NumChalet, NomChalet from Chalet where NbPieces = 5 ORDER BY NomChalet', 'simple where numérique', ''),
-(4, 4, '', 'Liste des salariés (nom et prénom) qui travaillent pour des hôtels ayant plus de 3 pièces ? ', 'SELECT PrenomEmp, NomEmp from Employe\r\nJOIN Hotel on Employe.NumHotel = hotel.NumHotel\r\nwhere  Employe.NumHotel in (\r\n	SELECT NumHotel from Chalet where NbPieces > 3)\r\n', 'Jointure et sous requête pour obtenir la liste des hôtels de plus de 3 pièces', ''),
-(5, 5, '', 'Suite à un changement de législation, les hôtels quatre étoiles sont reclassés en hôtel cinq étoiles. Écrivez la requête correspondante.', 'UPDATE Hotel set NbEtoiles = 5 WHERE NbEtoiles = 4', 'Modification des données', 'Select count(*) as \'nb 5 étoiles\' from hotel where NbEtoiles = 5'),
-(6, 6, '', 'Quel est le salarié (nom, prénom) qui a le salaire le plus élevé ?', 'SELECT PrenomEmp, NomEmp, max(salaire) from Employe', 'Simple requête avec calcul', ''),
-(7, 7, '', 'Quel est le salarié (nom, prénom, nom de l’hôtel) qui a le salaire le plus élevé ?', 'SELECT PrenomEmp, NomEmp, max(salaire), NomHotel from Employe\r\njoin Hotel on Employe.NumHotel = Hotel.NumHotel\r\n', 'jointure', ''),
-(8, 8, '', 'Liste des salariés (nom, prénom) qui ont un salaire supérieur à la moyenne des salaires', 'SELECT PrenomEmp, NomEmp from Employe GROUP by NomEmp HAVING Salaire > (SELECT avg(Salaire) from Employe)', 'Sous requête avec calcul et regroupement', ''),
-(9, 9, '', 'Créez la requête qui ajoutera le nouvel employé Albus DUMBLEDORE habitant Londres, avec un salaire de 5000 (on ne dispose pas de son code postal pour l’instant). Il est rattaché à l’hôtel numéro 3', 'insert into Employe (PrenomEmp,NomEmp, VilleEmp, Salaire, NumHotel) VALUES(\"Albus\",\"Dumbledore\", \"Londres\", 5000, 3)', 'Simple ajout', 'select count(*) from Employe'),
-(10, 10, '', 'Ajoutez l’employé Albus DUMBLEDORE habitant Londres, avec un salaire de 5000 (on ne dispose pas de son code postal pour l’instant). Il est rattaché à l’hôtel \"Cerisiers\".', 'insert into Employe (PrenomEmp,NomEmp, VilleEmp, Salaire, NumHotel) VALUES(\"Albus\",\"Dumbledore\", \"Londres\", 5000, \r\n	(select NumHotel from Hotel where NomHotel = \"Cerisiers\"))\r\n', 'Requête imbriquée pour avoir l\'id de l\'hotel', 'select count(*) from Employe');
+(1, 1, '', 'Quels sont les hôtels (nom et ville de l’hôtel) qui ont plus de 3 étoiles ?', 'SELECT NomHotel, VilleHotel from hotel WHERE NbEtoiles > 3', 'Simple requête avec where numérique', ''),
+(2, 2, '', 'Quel est le montant total des salaires (addition) par hôtel (numéro et nom d’hôtel) triés\r\npar ordre alphabétique des hôtels ?', 'select NomHotel, sum(Salaire) from employe\r\nJOIN hotel on hotel.NumHotel = employe.NumHotel\r\nGroup by NomHotel \r\norder by NomHotel \r\n', 'Jointure et addition', ''),
+(3, 3, '', 'Quels sont les chalets (numéro et nom du chalet) qui ont 5 pièces, classés par hôtels (nom de l’hôtel) ?', 'SELECT NumChalet, NomChalet from chalet where NbPieces = 5 ORDER BY NomChalet', 'simple where numérique', ''),
+(4, 4, '', 'Liste des salariés (nom et prénom) qui travaillent pour des hôtels ayant plus de 3 pièces ? ', 'SELECT PrenomEmp, NomEmp from employe\r\nJOIN hotel on employe.NumHotel = hotel.NumHotel\r\nwhere  employe.NumHotel in (\r\n	SELECT NumHotel from chalet where NbPieces > 3)\r\n', 'Jointure et sous requête pour obtenir la liste des hôtels de plus de 3 pièces', ''),
+(5, 5, '', 'Suite à un changement de législation, les hôtels quatre étoiles sont reclassés en hôtel cinq étoiles. Écrivez la requête correspondante.', 'UPDATE hotel set NbEtoiles = 5 WHERE NbEtoiles = 4', 'Modification des données', 'Select count(*) as \'nb 5 étoiles\' from hotel where NbEtoiles = 5'),
+(6, 6, '', 'Quel est le salarié (nom, prénom) qui a le salaire le plus élevé ?', 'SELECT PrenomEmp, NomEmp, max(salaire) from employe', 'Simple requête avec calcul', ''),
+(7, 7, '', 'Quel est le salarié (nom, prénom, nom de l’hôtel) qui a le salaire le plus élevé ?', 'SELECT PrenomEmp, NomEmp, max(salaire), NomHotel from employe\r\njoin hotel on employe.NumHotel = hotel.NumHotel\r\n', 'jointure', ''),
+(8, 8, '', 'Liste des salariés (nom, prénom) qui ont un salaire supérieur à la moyenne des salaires', 'SELECT PrenomEmp, NomEmp from employe GROUP by NomEmp, Salaire HAVING Salaire > (SELECT avg(Salaire) from employe)', 'Sous requête avec calcul et regroupement', ''),
+(9, 9, '', 'Créez la requête qui ajoutera le nouvel employé Albus DUMBLEDORE habitant Londres, avec un salaire de 5000 (on ne dispose pas de son code postal pour l’instant). Il est rattaché à l’hôtel numéro 3', 'insert into employe (PrenomEmp,NomEmp, VilleEmp, Salaire, NumHotel) VALUES(\"Albus\",\"Dumbledore\", \"Londres\", 5000, 3)', 'Simple ajout', 'select count(*) from employe'),
+(10, 10, '', 'Ajoutez l’employé Albus DUMBLEDORE habitant Londres, avec un salaire de 5000 (on ne dispose pas de son code postal pour l’instant). Il est rattaché à l’hôtel \"Cerisiers\".', 'insert into employe (PrenomEmp,NomEmp, VilleEmp, Salaire, NumHotel) VALUES(\"Albus\",\"Dumbledore\", \"Londres\", 5000, \r\n	(select NumHotel from hotel where NomHotel = \"Cerisiers\"))\r\n', 'Requête imbriquée pour avoir l\'id de l\'hotel', 'select count(*) from employe');
 
 -- --------------------------------------------------------
 

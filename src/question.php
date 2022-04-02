@@ -75,8 +75,15 @@ $query = $row[4];
 // Sinon on ajoute le begin transac et on exécute le rollback avant et après.
 if ($row[6]=="") {
 	$result= mysqli_query($conUser,$query);
-	$response['corr'] = sql_to_html_table( $result, $delim="\n" ) ; 
-	mysqli_free_result($result);
+	if (is_bool($result) === true) {
+		//$response['res'] = $result;
+		$response['corr'] = "<span class='warning'>".$result."<br/>".mysqli_error($conUser)."</span>";
+	}else{
+		$response['corr'] = sql_to_html_table( $result, $delim="\n" ) ; 
+	}
+	if (is_bool($result) ==! true) {
+		mysqli_free_result($result);
+	}
 }else{
 	$beginTransac = mysqli_begin_transaction($conUser);
 	$rbBefore = mysqli_query($conUser,$row[6]);

@@ -82,7 +82,7 @@ if ($row[6]=="") {
 		//$response['res'] = $result;
 		$response['res'] = "<span class='warning'>Ne faites pas de modification dans cette question!</span>";
 	}else{
-	$response['res'] = sql_to_html_table( $result, $delim="\n" ) ; 
+		$response['res'] = sql_to_html_table( $result, $delim="\n" ) ; 
 	}
 	$rb = mysqli_rollback($conUser);
 	if (is_bool($result) ==! true) {

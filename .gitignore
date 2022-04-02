@@ -4,5 +4,11 @@ config/configAdmin.php
 config/configUser.php
 Git-tuto.txt
 admin/
+crypt.php
+*.htaccess
+*.htpasswd
+**/.htaccess
+**/.htpasswd
+
 
 
