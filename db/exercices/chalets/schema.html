@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+</head>
+
+<body>
+
+  
+  <div class="mermaid">
+  
+  erDiagram
+	Type ||--o{ Chalet : appartient
+    Type {
+		int CodeType PK
+		string LibelleType
+		float TarifSemaine
+		float TarifNuitee
+    }
+    Chalet ||--o{ Hotel : appartient
+    Chalet {
+        int NumChalet PK
+        string NomChalet
+        int CapaciteAccueil
+		int NbPieces
+		int NbLitsSimples
+		int NbLitsDoubles
+		int NumHotel FK
+		int CodeType FK
+    }
+    Hotel ||--|{ Employe : travaille
+	Hotel {
+		int NumHotel PK
+		string NomHotel
+		int NbEtoiles
+		string CPEmp
+		string VilleEmp
+    }
+    Employe {
+		int CodeEmp PK
+		string NomEmp
+		string PrenomEmp
+		string RueEmp
+		string VilleEmp
+		string CPEmp
+		float Salaire
+		int NumHotel FK
+    }
+  
+  </div>
+  
+  
+
+  
+  
+
+  <!-- <script src="https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js"></script> -->
+  <script src="../../../ext/mermaid/mermaid.min.js"></script>
+
+  <script>
+
+    mermaid.initialize({
+
+      //theme: 'forest'
+      theme: 'default'
+      //theme: 'dark'
+      //theme: 'neutral'
+
+    });
+
+  </script>
+
+</body>
+
+</html>
