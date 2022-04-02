@@ -1,5 +1,7 @@
 :root{
   --primary: #22ABCF;
+  --warning: #FF0F94;
+  --success: #8fc32a;
   --maxwidth: 400px;
 }
 
@@ -231,7 +233,13 @@ th,td{
 	
 }
 
-
+.warning {
+	padding: 5px;
+	background: var(--warning);
+	border:2px solid white;
+	color:white;
+	box-shadow: 3px 3px 3px lightgrey;
+}
 
 footer {
 	
@@ -253,6 +261,7 @@ footer {
 	/*margin-top:1px;
 	margin-bottom:1px;*/
 }
+
 
 
 
