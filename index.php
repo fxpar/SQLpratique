@@ -16,7 +16,7 @@ require_once('config/configAdmin.php');
 //$ex = $_POST['ex']; 
  if(isset($_GET['ex'])) { $ex = $_GET['ex'];} else {$ex = 'livres'; };
  if(isset($_GET['num'])) { $num = $_GET['num'];} else {$num = 1; };
- if(isset($_GET['i'])) { $i = $_GET['i'];} else {$i = 1; };
+ if(isset($_GET['i'])) { $i = $_GET['i'];} else {$i = 0; };
 // prends le nom de l'exercice
 
 
@@ -120,7 +120,7 @@ mysqli_close($con);
 		<div id="schemaRel" class="" style="display:none"><?php echo file_get_contents('db/exercices/'.$ex.'/schemaRel.txt') ?></div>
 		
 		<!-- Formulaire requête -->
-		<form method="post" onsubmit="return getResult(this.query.value);" action="" id="form1">	
+		<form method="post" onsubmit="return getResult(this.query.value);" action="" id="form1" name="quiz">	
 		<span id="exSelect">
 				<label for="exList">Exercice:</label>
 
@@ -134,7 +134,7 @@ mysqli_close($con);
 			</span>		
 			<span>
 				<label for="num">Question n°:</label>
-				<input type="text" name="num" id="num" size="2" value="<?php echo $num ?>"/>
+				<input type="text" name="num" id="num" size="2" value="<?php echo $num ?>" onchange="window.location.href = currenLocation+'?ex='+document.forms.quiz.ex[document.forms.quiz.ex.selectedIndex].value+'&i='+document.forms.quiz.ex.selectedIndex+'&num='+document.forms.quiz.num.value;"/>
 			</span>
 		
 		

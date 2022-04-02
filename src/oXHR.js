@@ -38,6 +38,8 @@
 						if (response[0][5] !="") {
 						document.getElementById("commentaire").innerHTML = response[0][5];
 						}
+						// mettre la liste déroulante de l'exercice sur l'exercice en cours
+						// provient de 
 						setEx(i, num);
 					}
 				}
@@ -145,10 +147,11 @@
     return undefined;
 }
 
-			// fonction pour mettre sélectionner l'exercice en cours
+			// fonction pour sélectionner l'exercice en cours
 			
 			function setEx(i, n){
-				
+				console.log("SETEX:i="+i+" et n="+n);
+				console.log(document.getElementById('exList').getElementsByTagName('option')[i].value);
 				document.getElementById('exList').getElementsByTagName('option')[i].selected = 'selected';
 				document.getElementById('num').value = n;
 			}
