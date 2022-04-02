@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : mer. 09 mars 2022 à 21:58
+-- Généré le : mer. 30 mars 2022 à 15:07
 -- Version du serveur :  5.7.11
 -- Version de PHP : 7.4.6
 
@@ -27,6 +27,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `eteam`
 --
 
+DROP TABLE IF EXISTS `eteam`;
 CREATE TABLE `eteam` (
   `id` varchar(3) NOT NULL,
   `teamname` varchar(50) DEFAULT NULL,
@@ -61,6 +62,7 @@ INSERT INTO `eteam` (`id`, `teamname`, `coach`) VALUES
 -- Structure de la table `game`
 --
 
+DROP TABLE IF EXISTS `game`;
 CREATE TABLE `game` (
   `id` int(11) NOT NULL,
   `mdate` varchar(12) DEFAULT NULL,
@@ -112,6 +114,7 @@ INSERT INTO `game` (`id`, `mdate`, `stadium`, `team1`, `team2`) VALUES
 -- Structure de la table `goal`
 --
 
+DROP TABLE IF EXISTS `goal`;
 CREATE TABLE `goal` (
   `matchid` int(11) NOT NULL DEFAULT '0',
   `teamid` varchar(3) DEFAULT NULL,

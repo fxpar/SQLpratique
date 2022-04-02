@@ -108,7 +108,7 @@ mysqli_close($con);
 				
 				<div type="button" class="bouton nav " id = "bouton2" value="Question précédente" onclick="num=desincremente(num);getQuestion(ex,num);reset();" >&lt; préc</div>	
 				
-				<div type="button" class="bouton schema sep" id="btSchemaUml" name="submit" value="Modèle conceptuel UML" onclick="if (!Popup1 || !Popup1.open || Popup1.closed) Popup1 = ouvrePopup('schemaUML.php', 500, 650); else Popup1.focus();" >▶ UML</div>
+				<div type="button" class="bouton schema sep" id="btSchemaUml" name="submit" value="Modèle conceptuel UML" onclick="if (!Popup1 || !Popup1.open || Popup1.closed) Popup1 = ouvrePopup('./db/exercices/<?php echo $ex ?>/schema.html', 500, 650); else Popup1.focus();" >▶ UML</div>
 				
 				<div type="button" class="bouton schema sep" id="btSchemaRel"  onclick="HideShow('schemaRel','btSchemaRel','▼ Tables', '▶ Tables');" >▶ Tables</div> 
 				
