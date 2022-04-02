@@ -69,12 +69,25 @@ mysqli_set_charset( $conUser, 'utf8');
 
 $query = $row[4];
 
+// Nettoyer la requête de l'étudiant en enlevant les 
+$interdits = array("Start transaction", "Rollback", "commit");
+$queryEtu = str_ireplace($interdits, "", $queryEtu); ;
+
 // S'il le rollback est vide, on execute la correction
 // Sinon on ajoute le begin transac et on exécute le rollback avant et après.
 if ($row[6]=="") {
+	$beginTransac = mysqli_begin_transaction($conUser);
 	$result= mysqli_query($conUser,$queryEtu);
+	if (is_bool($result) === true) {
+		//$response['res'] = $result;
+		$response['res'] = "Ne faites pas de modification dans cette question!";
+	}else{
 	$response['res'] = sql_to_html_table( $result, $delim="\n" ) ; 
-	mysqli_free_result($result);
+	}
+	$rb = mysqli_rollback($conUser);
+	if (is_bool($result) ==! true) {
+		mysqli_free_result($result);
+	}
 }else{
 	$beginTransac = mysqli_begin_transaction($conUser);
 	$rbBefore = mysqli_query($conUser,$row[6]);
