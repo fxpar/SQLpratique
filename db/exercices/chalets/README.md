@@ -8,9 +8,9 @@ Inspiré de l'annale DCG 2019
 # Modèle relationnel
 ```mermaid
 erDiagram
-    Chalet }o--|| Hotel : appartenir
-	Chalet }o--|| Type : appartenir
-    Chalet {
+    chalet }o--|| hotel : appartenir
+	chalet }o--|| type : appartenir
+    chalet {
 			int NumChalet
 			text NomChalet
 			int CapaciteAccueil
@@ -20,8 +20,8 @@ erDiagram
 			int NumHotel
 			int CodeType
     }
-    Employe }o--|| Hotel : travailler
-    Employe {
+    employe }o--|| hotel : travailler
+    employe {
 			int CodeEmp
 			text NomEmp
 			text PrenomEmp
@@ -31,14 +31,14 @@ erDiagram
 			float Salaire
 			int NumHotel
     }
-    Hotel {
+    hotel {
 			int NumHotel
 			text NomHotel
 			int NbEtoiles
 			int CPEmp
 			text VilleEmp
     }
-	Type {
+	type {
 			int Type
 			int CodeType
 			text LibelleType

@@ -10,73 +10,30 @@
 
 <body>
 
-  <div class="mermaid">
 
-  graph LR
-
-      A --- B
-
-      B-->C[Happy]
-
-      B-->D(Sad);
-
-  </div>
-  
-  
-  <div class="mermaid">
-  
-  flowchart TD
-    A[Start] --> B{Is it?}
-    B -- Yes --> C[OK]
-    C --> D[Rethink]
-    D --> B
-    B -- No ----> E[End]
-	
-  </div>
   
   <div class="mermaid">
   
   erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    CUSTOMER {
-        string name
-        string custNumber
-        string sector
+    livre ||--o{ auteur : ecrit
+    livre {
+        int id
+        string titre
+        string isbn
+		int auteur FK
     }
-    ORDER ||--|{ LINE-ITEM : contains
-    ORDER {
-        int orderNumber
-        string deliveryAddress
+    auteur {
+        int id
+        string nom
+		string prenom
     }
-    LINE-ITEM {
-        string productCode
-        int quantity
-        float pricePerUnit
-    }
+
   
   </div>
   
   
   
-  <div class="mermaid">
-  
-  erDiagram
-    CAR ||--o{ NAMED-DRIVER : allows
-    CAR {
-        string allowedDriver FK "The license of the allowed driver"
-        string registrationNumber
-        string make
-        string model
-    }
-    PERSON ||--o{ NAMED-DRIVER : is
-    PERSON {
-        string driversLicense PK "The license #"
-        string firstName
-        string lastName
-        int age
-    }
-  
-  </div>
+
   
   
 

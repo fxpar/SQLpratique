@@ -14,15 +14,15 @@
   <div class="mermaid">
   
   erDiagram
-	Type ||--o{ Chalet : appartient
-    Type {
+	Type ||--o{ chalet : appartient
+    type {
 		int CodeType PK
 		string LibelleType
 		float TarifSemaine
 		float TarifNuitee
     }
-    Chalet ||--o{ Hotel : appartient
-    Chalet {
+    chalet ||--o{ hotel : appartient
+    chalet {
         int NumChalet PK
         string NomChalet
         int CapaciteAccueil
@@ -32,15 +32,15 @@
 		int NumHotel FK
 		int CodeType FK
     }
-    Hotel ||--|{ Employe : travaille
-	Hotel {
+    hotel ||--|{ employe : travaille
+	hotel {
 		int NumHotel PK
 		string NomHotel
 		int NbEtoiles
 		string CPEmp
 		string VilleEmp
     }
-    Employe {
+    employe {
 		int CodeEmp PK
 		string NomEmp
 		string PrenomEmp
