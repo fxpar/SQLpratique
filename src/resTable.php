@@ -80,7 +80,8 @@ if ($row[6]=="") {
 	$result= mysqli_query($conUser,$queryEtu);
 	if (is_bool($result) === true) {
 		//$response['res'] = $result;
-		$response['res'] = "<span class='warning'>Ne faites pas de modification dans cette question!</span>";
+		//$response['res'] = "<span class='warning'>Ne faites pas de modification dans cette question!</span>";
+		$response['res'] = "<span class='warning'>".$result."<br/>".mysqli_error($conUser)."</span>";
 	}else{
 		$response['res'] = sql_to_html_table( $result, $delim="\n" ) ; 
 	}

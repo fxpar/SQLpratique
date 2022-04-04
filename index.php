@@ -145,7 +145,12 @@ mysqli_close($con);
 		</p>		
 	
 		<!-- Résultat attendu -->
-		<div id="corrTable" ></div>			
+		<p style="color:var(--primary);font-weight:bold;">Résultat Attendu</p>
+		
+		<!--<fieldset>
+			<legend style="color:var(--primary);font-weight:bold;">Résultat Attendu</legend>-->
+			<div id="corrTable" ></div>			
+		<!-- </fieldset> -->
 		
 		<!-- Correction -->
 		<p type="button" id="boutonCorr" value="Correction" onclick="HideShow('requete','boutonCorr','Masquer la correction', 'Voir la correction');" /> Voir la correction<p>
