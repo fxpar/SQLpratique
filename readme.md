@@ -23,6 +23,11 @@ Les réponses des étudiants ne sont pas collectées ni stockées
 Aucune authentification.
 Aucune note.
 
+## Démo et présentation vidéo
+Vidéo youtube de présentation de l'outil.
+
+[![Moodle Design Headers](https://i.ytimg.com/vi/uDb__8qfqVI/hqdefault.jpg)](
+https://www.youtube.com/watch?v=uDb__8qfqVI)
 
 ## Type d'exercices
 * exercices à plusieurs tables
