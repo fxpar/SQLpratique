@@ -1,0 +1,19 @@
+<ul>
+</li>
+<li>
+<span class="tname">Commandes</span> (
+<span class="cp">ID</span>,
+<span class="at">DateCmd</span>,
+<span class="at">DateEnvoi</span>,
+<span class="at">DatePromise</span>,
+<span class="at">Ville</span>,
+<span class="at">Pays</span>,
+<span class="at">DépôtDépart</span>,
+<span class="at">Transporteur</span>,
+<span class="at">Montant</span>,
+<span class="at">Frais de port</span>,
+<span class="at">Responsable</span>,
+<span class="at">Alerte</span>,
+<span class="at">ordre</span>)
+</li>
+</ul>

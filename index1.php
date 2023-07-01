@@ -127,7 +127,6 @@ mysqli_close($con);
 				<select name="ex" id="exList" onchange="window.location.href = currenLocation+'?ex='+this.options[this.selectedIndex].value+'&i='+this.options[this.selectedIndex].index;">
 				  <option value="livres" selected="selected">Livres</option>
 				 <!-- <option value="euro2021">euro2021</option> -->
-				 <option value="commandes">commandes</option>
 				  <option value="employee">employee</option>
 				 <!-- <option value="audi">Sport</option> -->
 				  <option value="chalets" style="display:none">chalets</option>
@@ -135,7 +134,7 @@ mysqli_close($con);
 				  <option value="dcg2019">dcg2019</option>
 				  <option value="dcg2020">dcg2020</option>
 				  <option value="dcg2022">dcg2022</option>
-				  <option value="alimentaire">alimentaire</option>
+				  
 				</select> 
 			</span>		
 			<span>

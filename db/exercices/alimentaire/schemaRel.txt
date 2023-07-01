@@ -1,0 +1,117 @@
+<ul>
+	<li>
+		<span class="tname">Clients</span> (
+<span class="cp">IDClient</span>,
+<span class="at">Adresse</span>,
+<span class="at">Ville</span>,
+<span class="at">Etat</span>,
+<span class="at">CodePostal</span>,
+<span class="at">Pays</span>)
+	</li>
+	<li>
+		<span class="tname">Commandes</span> (
+<span class="cp">IDCommande</span>,
+<span class="ce">IDDuClient</span>,
+<span class="ce">IDDeEmployé</span>,
+<span class="at">DateCommande</span>,
+<span class="at">DatePromise</span>,
+<span class="at">DateEnvoi</span>,
+<span class="ce">Expéditeur</span>,
+<span class="at">FraisDePort</span>,
+<span class="at">DestNom</span>,
+<span class="at">DestAdresse</span>,
+<span class="at">Destat</span>,
+<span class="at">DestVille</span>)
+	</li>
+	<li>
+		<span class="tname">Dépôts</span> (
+<span class="cp">IDDépôt</span>,
+<span class="at">Nom</span>,
+<span class="at">Adresse</span>,
+<span class="at">Ville</span>,
+<span class="at">CodePostal</span>)
+	</li>
+	<li>
+		<span class="tname">DétailCommande</span> (
+<span class="ce">IDCommande</span>,
+<span class="ce">IDDuProduit</span>,
+<span class="at">Quantité</span>)
+	</li>
+	<li>
+		<span class="tname">Employé</span> (
+<span class="cp">IDEmployé</span>,
+<span class="at">Prénom</span>,
+<span class="at">Nom</span>,
+<span class="at">Sexe</span>,
+<span class="at">Naisssance</span>,
+<span class="at">Entrée</span>,
+<span class="ce">Responsable</span>)
+	</li>
+	<li>
+		<span class="tname">Famille</span> (
+<span class="cp">Fa</span>,
+<span class="at">Famille</span>,
+<span class="at">FamilleEN</span>)
+	</li>
+	<li>
+		<span class="tname">Fournisseurs</span> (
+<span class="cp">IDFournisseur</span>,
+<span class="at">NomFournisseur</span>,
+<span class="at">ISIN</span>,
+<span class="at">Pays</span>,
+<span class="at">Région</span>,
+<span class="at">NomContact</span>,
+<span class="at">PrénomContact</span>,
+<span class="at">Titre</span>)
+	</li>
+	<li>
+		<span class="tname">MotifsRupture</span> (
+<span class="cp">IDMotifRupture</span>,
+<span class="at">MotifRupture</span>)
+	</li>
+	<li>
+		<span class="tname">MotifsTicket</span> (
+<span class="cp">IDMotifTicket</span>,
+<span class="at">MotifTicket</span>)
+	</li>
+	<li>
+		<span class="tname">Produits</span> (
+<span class="cp">Id</span>,
+<span class="at">Désignation article</span>,
+<span class="at">Rayon</span>,
+<span class="at">Famille</span>,
+<span class="at">Prix</span>,
+<span class="at">Coût</span>,
+<span class="at">Selectionner</span>,
+<span class="at">Rupture</span>,
+<span class="ce">MotifRupture</span>,
+<span class="at">StockMini</span>,
+<span class="ce">Fournisseur</span>)
+	</li>
+	<li>
+		<span class="tname">Rayon</span> (
+<span class="cp">IDRayon</span>,
+<span class="at">Intitulé</span>)
+	</li>
+	<li>
+		<span class="tname">RégionsFrance</span> (
+<span class="at">Département</span>,
+<span class="at">Région</span>)
+	</li>
+	<li>
+		<span class="tname">Stock</span> (
+<span class="ce">IDDUProduit</span>,
+<span class="ce">IDDuDépôt</span>,
+<span class="at">Quantité</span>)
+	</li>
+	<li>
+		<span class="tname">Ticket</span> (
+<span class="cp">IDTicket</span>,
+<span class="ce">IDDeLaCommande</span>,
+<span class="at">Produit</span>,
+<span class="at">DateTicket</span>,
+<span class="at">DateClôture</span>,
+<span class="ce">MotifDeTicket</span>)
+	</li>
+</ul>
+
