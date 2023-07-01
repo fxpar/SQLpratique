@@ -75,7 +75,7 @@ mysqli_close($con);
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<meta name="Author" content="François Parlant" />
-	<meta name="Keywords" content="Jérôme,Darmont,Enseignement,Informatique,SQL,MySQL,Tutoriel,Didacticiel" />
+	<meta name="Keywords" content="IAE de Bordeaux, entrainement SQL" />
 	<meta name="Description" content="Entrainement au SQL (sur une idée originale de DARMONT Jérôme,HUYNH NGO Uyen Kim,ROJTHONGKUM Narumon)" />
 	<!--<link href="./ext//bootstrap/css/bootstrap.min.css" rel="stylesheet" >
 <script src="./ext/bootstrap/js/bootstrap.bundle.min.js" ></script>-->
@@ -110,14 +110,14 @@ mysqli_close($con);
 				
 				<div type="button" class="bouton schema sep" id="btSchemaUml" name="submit" value="Modèle conceptuel UML" onclick="if (!Popup1 || !Popup1.open || Popup1.closed) Popup1 = ouvrePopup('./db/exercices/<?php echo $ex ?>/schema.html', 500, 650); else Popup1.focus();" >▶ UML</div>
 				
-				<div type="button" class="bouton schema sep" id="btSchemaRel"  onclick="HideShow('schemaRel','btSchemaRel','▼ Tables', '▶ Tables');" >▶ Tables</div> 
+				<div type="button" class="bouton schema sep" id="btSchemaRel"  onclick="HideShow('schemaRel','btSchemaRel','▼ Tables', '▶ Tables');" >▼ Tables</div> 
 				
 				<div type="button" class="bouton nav sep" id = "bouton2" value="Question suivante" onclick="num=incremente(num);getQuestion(ex,num);reset();" >suiv &gt;</div>	
 			
 		</nav>
 		
 		<!-- Schéma Relatinnel -->
-		<div id="schemaRel" class="" style="display:none"><?php echo file_get_contents('db/exercices/'.$ex.'/schemaRel.txt') ?></div>
+		<div id="schemaRel" class="" style=""><?php echo file_get_contents('db/exercices/'.$ex.'/schemaRel.txt') ?></div>
 		
 		<!-- Formulaire requête -->
 		<form method="post" onsubmit="return getResult(this.query.value);" action="" id="form1" name="quiz">	
@@ -126,10 +126,14 @@ mysqli_close($con);
 
 				<select name="ex" id="exList" onchange="window.location.href = currenLocation+'?ex='+this.options[this.selectedIndex].value+'&i='+this.options[this.selectedIndex].index;">
 				  <option value="livres" selected="selected">Livres</option>
-				  <option value="euro2021">euro2021</option>
+				 <!-- <option value="euro2021">euro2021</option> -->
 				  <option value="employee">employee</option>
-				  <option value="audi">Sport</option>
-				  <option value="chalets">chalets</option>
+				 <!-- <option value="audi">Sport</option> -->
+				  <option value="chalets" style="display:none">chalets</option>
+				  <option value="classes">classes</option>
+				  <option value="dcg2019">dcg2019</option>
+				  <option value="dcg2020">dcg2020</option>
+				  <option value="dcg2022">dcg2022</option>
 				</select> 
 			</span>		
 			<span>

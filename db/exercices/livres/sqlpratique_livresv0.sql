@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : sam. 16 avr. 2022 à 06:39
+-- Généré le : mer. 30 mars 2022 à 15:34
 -- Version du serveur :  5.7.11
 -- Version de PHP : 7.4.6
 
@@ -18,42 +18,49 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `sqlpratique_etudiants`
+-- Base de données : `sqlpratique_livres`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `etudiants`
+-- Structure de la table `livre`
 --
 
-DROP TABLE IF EXISTS `etudiants`;
-CREATE TABLE `etudiants` (
+DROP TABLE IF EXISTS `livre`;
+CREATE TABLE `livre` (
   `id` int(11) NOT NULL,
-  `nom` varchar(100) DEFAULT NULL,
-  `prenom` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `titre` text NOT NULL,
+  `isbn` tinytext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `etudiants`
+-- Déchargement des données de la table `livre`
 --
 
-INSERT INTO `etudiants` (`id`, `nom`, `prenom`) VALUES
-(1, 'Granger', 'Hermione'),
-(2, 'Potter', 'Harry'),
-(3, 'Weasley', 'Ron'),
-(4, 'Malfoy', 'Draco'),
-(5, 'Minerva', 'Albus');
+INSERT INTO `livre` (`id`, `titre`, `isbn`) VALUES
+(1, 'Astérix le gaulois', '27465465'),
+(2, 'Cyrano de Bergerac', '2789456321');
 
 --
 -- Index pour les tables déchargées
 --
 
 --
--- Index pour la table `etudiants`
+-- Index pour la table `livre`
 --
-ALTER TABLE `etudiants`
+ALTER TABLE `livre`
   ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `livre`
+--
+ALTER TABLE `livre`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

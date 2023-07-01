@@ -4,12 +4,30 @@
 			<span class="cp">id</span>,
 			<span class="at">titre</span>,
 			<span class="at">isbn</span>,
-			<span class="ce">auteur</span>)
+			<span class="ce">type</span>)
 		</li>
 		<li>
 			<span class="tname">auteur</span> (
 			<span class="cp">id</span>,
 			<span class="at">nom</span>,
 			<span class="at">prenom</span>)
+		</li>
+		<li>
+			<span class="tname">contribution</span> (
+			<span class="ce">auteur</span>,
+			<span class="ce">livre</span>,
+			<span class="ce">role</span>)
+		</li>
+		<li>
+			<span class="tname">role</span> (
+			<span class="cp">id</span>,
+			<span class="at">fr</span>,
+			<span class="at">en</span>)
+		</li>
+		<li>
+			<span class="tname">type</span> (
+			<span class="cp">id</span>,
+			<span class="at">fr</span>,
+			<span class="at">en</span>)
 		</li>
 </ul>

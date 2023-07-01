@@ -15,18 +15,18 @@
   <div class="mermaid">
   
   erDiagram
-    livre ||--o{ auteur : ecrit
-    livre {
-        int id PK
-        string titre
-        string isbn
-		int auteur FK
+    classes {
+        int nomClasse PK
+        integer effClasse
     }
-    auteur {
-        int id PK
-        string nom
-		string prenom
+	rendu {
+        int date
+        string nomDevoir
+        string nomEtu
+        string prenomEtu
+		string nomClasse
     }
+
 
   
   </div>

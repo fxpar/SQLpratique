@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="ansi">
+
+</head>
+
+<body>
+
+
+  
+  <div class="mermaid">
+  
+  erDiagram
+    Navire ||--o{ Escale : dispose
+	Navire ||--|{ Pays : appartient
+	Navire {
+		int numOMI
+		string nomNavire
+		string longueur
+		string largeur
+		string tirantdEauMax
+		int idTypeNavire
+		string libelléTypeNavire
+		string idPays
+	}
+	Marchandise {
+		string idMarchandise
+		string LibelléMarchandise
+	}
+	
+	Pays {
+		string idPays
+		string pavillon
+		string pays
+	}
+	Emplacement {
+		int IdEmpl
+		string idQuai
+		string longueurEmpl
+		string tirantEauEmpl
+	}
+	Quai {
+		int idQuai
+		string nomQuai
+	}
+	Client {
+		int idClient
+		string raisonSocialeClient
+		string adrRueClient
+		string CPClient
+		string adrVilleClient
+		string mailClient
+		string telClient
+	}
+	Escale {
+		int idEscale
+		string dateDébut
+		string dateFin
+		string tirantdEauArrivée
+		string tirantdEauDépart
+		string idAgent
+		string numOMI
+		string idQuai
+		string idEmpl
+	}
+	AgentConsignataire {
+		int idAgent
+		string raisonSocialeAgent
+		string adrRueAgent
+		string CPAgent
+		string adrVilleAgent
+		string mailAgent
+		string telAgent
+	}
+	Opération {
+		int idOpération
+		string libelléOpération
+	}
+	CompositionCargaison {
+		int idEscale
+		string idOpération
+		string idMarchandise
+		string idClient
+		string tonnageMarchandise
+	}
+
+
+
+
+  
+  </div>
+  
+  
+  
+
+  
+  
+
+  <!-- <script src="https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js"></script> -->
+  <script src="../../../ext/mermaid/mermaid.min.js"></script>
+
+  <script>
+
+    mermaid.initialize( {
+
+      //theme: 'forest'
+      theme: 'default'
+      //theme: 'dark'
+      //theme: 'neutral'
+
+    });
+
+  </script>
+
+</body>
+
+</html>

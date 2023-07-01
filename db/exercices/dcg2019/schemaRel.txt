@@ -1,0 +1,66 @@
+<ul>
+<li>
+<span class="tname">Secteurs</span> (
+<span class="cp">NumSecteur</span>,
+<span class="at">NomSecteur</span>)
+</li>
+<li>
+<span class="tname">Hotels</span> (
+<span class="cp">NumHotel</span>,
+<span class="at">NomHotel</span>,
+<span class="at">NbEtoiles</span>,
+<span class="at">RueHotel</span>,
+<span class="at">CPHotel</span>,
+<span class="at">VilleHotel</span>,
+<span class="at">PaysHotel</span>)
+</li>
+<li>
+<span class="tname">Concernés</span> (
+<span class="cp ce">NumSecteur</span>,
+<span class="cp ce">NumHotel</span>,
+<span class="cp ce">CodeEmp</span>)
+</li>
+<li>
+<span class="tname">Lodges</span> (
+<span class="cp">NumLodge</span>,
+<span class="at">NomLodge</span>,
+<span class="at">CapaciteAccueil</span>,
+<span class="at">NbPieces</span>,
+<span class="at">NbLitsSimples</span>,
+<span class="at">NbLitsDoubles</span>,
+<span class="at">NumHotel</span>,
+<span class="ce">CodeType</span>)
+</li>
+<li>
+<span class="tname">Types</span> (
+<span class="cp">CodeType</span>,
+<span class="at">LibelléType</span>,
+<span class="at">TarifSemaine</span>,
+<span class="at">TarifNuitée</span>)
+</li>
+<li>
+<span class="tname">Employés</span> (
+<span class="cp">CodeEmp</span>,
+<span class="at">NomEmp</span>,
+<span class="at">PrénomEmp</span>,
+<span class="at">RueEmp</span>,
+<span class="at">VilleEmp</span>,
+<span class="at">CodePostalEmp</span>,
+<span class="at">Salaire</span>,
+<span class="ce">Saisonnier</span>,
+<span class="ce">Permanent</span>)
+</li>
+<li>
+<span class="tname">Saisonniers</span> (
+<span class="cp ce">DateDebutMission</span>,
+<span class="cp ce">DateFinMission</span>,
+<span class="at">Prime</span>,
+<span class="cp ce">CodeEmpSais</span>)
+</li>
+<li>
+<span class="tname">Permanents</span> (
+<span class="cp ce">DateEmbauche</span>,
+<span class="cp ce">CodeEmpPerm</span>)
+</li>
+</ul>
+

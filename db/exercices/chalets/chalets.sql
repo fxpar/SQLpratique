@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : dbiae
+<<<<<<< HEAD
 -- Généré le : sam. 16 avr. 2022 à 09:30
+=======
+-- Généré le : sam. 16 avr. 2022 à 07:45
+>>>>>>> copies
 -- Version du serveur : 10.5.15-MariaDB-1:10.5.15+maria~focal
 -- Version de PHP : 8.0.15
 

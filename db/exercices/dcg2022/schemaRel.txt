@@ -1,0 +1,53 @@
+<ul>
+<li>
+<span class="tname">CLIENT</span> (
+<span class="cp">numClient</span>,
+<span class="at">nomClient</span>,
+<span class="at">prénomClient</span>,
+<span class="at">adresseRueClient</span>,
+<span class="at">cpClient</span>,
+<span class="at">adrVilleClient</span>,
+<span class="at">mailClient</span>,
+<span class="at">telClient</span>)
+</li>
+<li>
+<span class="tname">SEJOUR</span> (
+<span class="cp">CodeSéjour</span>,
+<span class="at">LibelléSéjour</span>)
+</li>
+<li>
+<span class="tname">RESERVER</span> (
+<span class="cp ce">numClient</span>,
+<span class="cp ce">CodeSéjour</span>,
+<span class="ce">DateDébutSéjour</span>)
+</li>
+<li>
+<span class="tname">PLANIFIER</span> (
+<span class="cp ce">numClient</span>,
+<span class="cp ce">dateSoin</span>,
+<span class="cp ce">codeSoin</span>,
+<span class="at">heureSoin</span>,
+<span class="ce">numPersonnel</span>)
+</li>
+<li>
+<span class="tname">SOIN</span> (
+<span class="cp">codeSoin</span>,
+<span class="at">libelléSoin</span>,
+<span class="at">duréeSoin</span>,
+<span class="ce">codeSalon</span>)
+</li>
+<li>
+<span class="tname">SALON</span> (
+<span class="cp">codeSalon</span>,
+<span class="at">libelléSalon</span>,
+<span class="at">nombreCabines</span>)
+</li>
+<li>
+<span class="tname">PERSONNEL</span> (
+<span class="cp">numPersonnel</span>,
+<span class="at">nomPersonnel</span>,
+<span class="at">prénomPersonnel</span>,
+<span class="ce">codeSalon</span>)
+</li>
+</ul>
+

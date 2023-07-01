@@ -9,6 +9,7 @@ crypt.php
 *.htpasswd
 **/.htaccess
 **/.htpasswd
+_backup/
 
 
 

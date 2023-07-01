@@ -1,0 +1,82 @@
+<ul>
+<li>
+<span class="tname">Navire</span> (
+<span class="cp">numOMI</span>,
+<span class="at">nomNavire</span>,
+<span class="at">longueur</span>,
+<span class="at">largeur</span>,
+<span class="at">tirantdEauMax</span>,
+<span class="at">idTypeNavire</span>,
+<span class="at">libelléTypeNavire</span>,
+<span class="ce">idPays</span>)
+</li>
+<li>
+<span class="tname">Marchandise</span> (
+<span class="cp">idMarchandise</span>,
+<span class="at">LibelléMarchandise</span>)
+</li>
+<li>
+<span class="tname">Pays</span> (
+<span class="cp">idPays</span>,
+<span class="at">pavillon</span>,
+<span class="at">pays</span>)
+</li>
+<li>
+<span class="tname">Emplacement</span> (
+<span class="cp">IdEmpl</span>,
+<span class="cp">idQuai</span>,
+<span class="at">longueurEmpl</span>,
+<span class="at">tirantEauEmpl</span>)
+</li>
+<li>
+<span class="tname">Quai</span> (
+<span class="cp">idQuai</span>,
+<span class="at">nomQuai</span>)
+</li>
+<li>
+<span class="tname">Client</span> (
+<span class="cp">idClient</span>,
+<span class="at">raisonSocialeClient</span>,
+<span class="at">adrRueClient</span>,
+<span class="at">CPClient</span>,
+<span class="at">adrVilleClient</span>,
+<span class="at">mailClient</span>,
+<span class="at">telClient</span>)
+</li>
+<li>
+<span class="tname">Escale</span> (
+<span class="cp">idEscale</span>,
+<span class="at">dateDébut</span>,
+<span class="at">dateFin</span>,
+<span class="at">tirantdEauArrivée</span>,
+<span class="at">tirantdEauDépart</span>,
+<span class="at">idAgent</span>,
+<span class="at">numOMI</span>,
+<span class="ce">idQuai</span>,
+<span class="ce">idEmpl</span>)
+</li>
+<li>
+<span class="tname">AgentConsignataire</span> (
+<span class="cp">idAgent</span>,
+<span class="at">raisonSocialeAgent</span>,
+<span class="at">adrRueAgent</span>,
+<span class="at">CPAgent</span>,
+<span class="at">adrVilleAgent</span>,
+<span class="at">mailAgent</span>,
+<span class="at">telAgent</span>)
+</li>
+<li>
+<span class="tname">Opération</span> (
+<span class="cp">idOpération</span>,
+<span class="at">libelléOpération</span>)
+</li>
+<li>
+<span class="tname">CompositionCargaison</span> (
+<span class="cp ce">idEscale</span>,
+<span class="cp ce">idOpération</span>,
+<span class="cp ce">idMarchandise</span>,
+<span class="cp ce">idClient</span>,
+<span class="at">tonnageMarchandise</span>)
+</li>
+</ul>
+

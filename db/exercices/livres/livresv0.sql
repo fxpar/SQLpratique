@@ -4,9 +4,9 @@
 --
 -- Hôte : dbiae
 <<<<<<< HEAD
--- Généré le : sam. 16 avr. 2022 à 09:30
+-- Généré le : sam. 16 avr. 2022 à 09:31
 =======
--- Généré le : sam. 16 avr. 2022 à 07:45
+-- Généré le : sam. 16 avr. 2022 à 07:46
 >>>>>>> copies
 -- Version du serveur : 10.5.15-MariaDB-1:10.5.15+maria~focal
 -- Version de PHP : 8.0.15
@@ -28,10 +28,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `employee`
+-- Structure de la table `livres`
 --
 
-CREATE TABLE `employee` (
+CREATE TABLE `livres` (
   `idQuestion` int(11) NOT NULL,
   `numQuestion` int(11) NOT NULL,
   `db` text NOT NULL,
@@ -42,20 +42,22 @@ CREATE TABLE `employee` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `employee`
+-- Déchargement des données de la table `livres`
 --
 
-INSERT INTO `employee` (`idQuestion`, `numQuestion`, `db`, `enonce`, `correction`, `commentaire`, `rollback`) VALUES
-(1, 1, 'sqlpratique_employee', 'Liste des employés ayant un salaire supérieur à celui de leur manager', 'SELECT E1.name as \'employee\', E1.salary, E1.managerId as \'mgr id\', E2.name as \'mgr\', E2.salary as \'mgr salary\' FROM employee E1 JOIN employee E2 on E1.managerId = E2.id Where E1.salary > E2.salary', 'Il s\'agit d\'une très belle requête d\'une table sur elle-même!', '');
+INSERT INTO `livres` (`idQuestion`, `numQuestion`, `db`, `enonce`, `correction`, `commentaire`, `rollback`) VALUES
+(6, 1, 'sqlpratique_livres', 'Afficher tous les éléments de la table livre', 'SELECT * FROM livre', 'tous les livres sont affichés', ''),
+(7, 2, 'sqlpratique_livres', 'Affiche tous les livres dont le titre commence par la lettre A', 'SELECT * FROM livre WHERE  	titre LIKE \"A%\"', 'On met LIKE et non égal.', ''),
+(8, 3, 'sqlpratique_livres', 'Supprimer le ou les livres dont le titre contient \"Cyrano\"', 'Delete from livre where titre like \"%Cyrano%\"', 'Attention à l\'intégrité référentielle lors de la suppression.', 'Select count(titre)  from livre');
 
 --
 -- Index pour les tables déchargées
 --
 
 --
--- Index pour la table `employee`
+-- Index pour la table `livres`
 --
-ALTER TABLE `employee`
+ALTER TABLE `livres`
   ADD PRIMARY KEY (`idQuestion`);
 
 --
@@ -63,10 +65,10 @@ ALTER TABLE `employee`
 --
 
 --
--- AUTO_INCREMENT pour la table `employee`
+-- AUTO_INCREMENT pour la table `livres`
 --
-ALTER TABLE `employee`
-  MODIFY `idQuestion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `livres`
+  MODIFY `idQuestion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

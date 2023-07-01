@@ -1,0 +1,16 @@
+<ul>
+		<li>
+			<span class="tname">classes</span> (
+			<span class="cp">nomClasse</span>,
+			<span class="at">effClasse</span>)
+		</li>
+		<li>
+			<span class="tname">rendus</span> (
+			<span class="at">date</span>,
+			<span class="at">nomDevoir</span>,
+			<span class="at">nomEtu</span>,
+			<span class="at">prenomEtu</span>,
+			<span class="ce">nomClasse</span>)
+		</li>
+		
+</ul>
